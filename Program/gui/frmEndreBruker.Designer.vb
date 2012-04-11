@@ -31,46 +31,59 @@ Partial Class frmEndreBruker
         '
         'btnNeste
         '
+        Me.btnNeste.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnNeste.Location = New System.Drawing.Point(198, 111)
         Me.btnNeste.Name = "btnNeste"
         Me.btnNeste.Size = New System.Drawing.Size(75, 23)
-        Me.btnNeste.TabIndex = 2
+        Me.btnNeste.TabIndex = 4
         Me.btnNeste.Text = "Neste"
         Me.btnNeste.UseVisualStyleBackColor = True
         '
         'lblNavn
         '
+        Me.lblNavn.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblNavn.AutoSize = True
         Me.lblNavn.Location = New System.Drawing.Point(12, 24)
         Me.lblNavn.Name = "lblNavn"
         Me.lblNavn.Size = New System.Drawing.Size(33, 13)
-        Me.lblNavn.TabIndex = 1
+        Me.lblNavn.TabIndex = 0
         Me.lblNavn.Text = "Navn"
         '
         'cbNavn
         '
+        Me.cbNavn.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbNavn.FormattingEnabled = True
         Me.cbNavn.Location = New System.Drawing.Point(97, 21)
         Me.cbNavn.Name = "cbNavn"
         Me.cbNavn.Size = New System.Drawing.Size(176, 21)
-        Me.cbNavn.TabIndex = 0
+        Me.cbNavn.TabIndex = 1
         '
         'lblBrukernavn
         '
+        Me.lblBrukernavn.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblBrukernavn.AutoSize = True
         Me.lblBrukernavn.Location = New System.Drawing.Point(12, 73)
         Me.lblBrukernavn.Name = "lblBrukernavn"
         Me.lblBrukernavn.Size = New System.Drawing.Size(62, 13)
-        Me.lblBrukernavn.TabIndex = 3
+        Me.lblBrukernavn.TabIndex = 2
         Me.lblBrukernavn.Text = "Brukernavn"
         '
         'TextBox1
         '
+        Me.TextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.Enabled = False
         Me.TextBox1.Location = New System.Drawing.Point(97, 70)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(103, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.TextBox1.TabIndex = 3
         '
         'frmEndreBruker
         '
