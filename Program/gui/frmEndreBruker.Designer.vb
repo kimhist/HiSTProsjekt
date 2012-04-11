@@ -36,7 +36,7 @@ Partial Class frmEndreBruker
         Me.btnNeste.Name = "btnNeste"
         Me.btnNeste.Size = New System.Drawing.Size(75, 23)
         Me.btnNeste.TabIndex = 4
-        Me.btnNeste.Text = "Neste"
+        Me.btnNeste.Text = "N&este"
         Me.btnNeste.UseVisualStyleBackColor = True
         '
         'lblNavn
@@ -49,7 +49,7 @@ Partial Class frmEndreBruker
         Me.lblNavn.Name = "lblNavn"
         Me.lblNavn.Size = New System.Drawing.Size(33, 13)
         Me.lblNavn.TabIndex = 0
-        Me.lblNavn.Text = "Navn"
+        Me.lblNavn.Text = "&Navn"
         '
         'cbNavn
         '
