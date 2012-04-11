@@ -72,11 +72,35 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmLogin.vb">
+    <Compile Include="gui\frmEndreBruker.Designer.vb">
+      <DependentUpon>frmEndreBruker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmEndreBruker.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.vb">
+    <Compile Include="gui\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmBrukerbehandling.Designer.vb">
+      <DependentUpon>frmBrukerbehandling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmBrukerbehandling.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmProduktRegistrering.Designer.vb">
+      <DependentUpon>frmProduktRegistrering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmProduktRegistrering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmUtleie.Designer.vb">
+      <DependentUpon>frmUtleie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmUtleie.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -96,6 +120,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="gui\frmEndreBruker.resx">
+      <DependentUpon>frmEndreBruker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmBrukerbehandling.resx">
+      <DependentUpon>frmBrukerbehandling.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
