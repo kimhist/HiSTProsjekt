@@ -84,16 +84,22 @@
     <Compile Include="gui\frmEndreBruker.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="gui\frmEndreProdukt.Designer.vb">
+      <DependentUpon>frmEndreProdukt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmEndreProdukt.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="gui\frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
     <Compile Include="gui\frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="gui\frmProduktRegistrering.Designer.vb">
-      <DependentUpon>frmProduktRegistrering.vb</DependentUpon>
+    <Compile Include="gui\frmProduktregistrering.Designer.vb">
+      <DependentUpon>frmProduktregistrering.vb</DependentUpon>
     </Compile>
-    <Compile Include="gui\frmProduktRegistrering.vb">
+    <Compile Include="gui\frmProduktregistrering.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="gui\frmUtleie.Designer.vb">
@@ -125,8 +131,14 @@
     <EmbeddedResource Include="gui\frmEndreBruker.resx">
       <DependentUpon>frmEndreBruker.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmEndreProdukt.resx">
+      <DependentUpon>frmEndreProdukt.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="gui\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmProduktregistrering.resx">
+      <DependentUpon>frmProduktregistrering.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
