@@ -23,6 +23,9 @@ Partial Class frmEndreProdukt
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.gbSokNavn = New System.Windows.Forms.GroupBox()
+        Me.btnNavnEndre = New System.Windows.Forms.Button()
+        Me.txtNavnProduktId = New System.Windows.Forms.TextBox()
+        Me.lblNavnProduktId = New System.Windows.Forms.Label()
         Me.cbNavnProduktNavn = New System.Windows.Forms.ComboBox()
         Me.lblNavnProduktNavn = New System.Windows.Forms.Label()
         Me.gbSokId = New System.Windows.Forms.GroupBox()
@@ -31,9 +34,6 @@ Partial Class frmEndreProdukt
         Me.lblIdProduktNavn = New System.Windows.Forms.Label()
         Me.cbIdProduktId = New System.Windows.Forms.ComboBox()
         Me.lblIdProduktid = New System.Windows.Forms.Label()
-        Me.lblNavnProduktId = New System.Windows.Forms.Label()
-        Me.txtNavnProduktId = New System.Windows.Forms.TextBox()
-        Me.btnNavnEndre = New System.Windows.Forms.Button()
         Me.gbSokNavn.SuspendLayout()
         Me.gbSokId.SuspendLayout()
         Me.SuspendLayout()
@@ -52,6 +52,39 @@ Partial Class frmEndreProdukt
         Me.gbSokNavn.TabIndex = 0
         Me.gbSokNavn.TabStop = False
         Me.gbSokNavn.Text = "Produktsøk på navn"
+        '
+        'btnNavnEndre
+        '
+        Me.btnNavnEndre.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnNavnEndre.Location = New System.Drawing.Point(179, 73)
+        Me.btnNavnEndre.Name = "btnNavnEndre"
+        Me.btnNavnEndre.Size = New System.Drawing.Size(75, 23)
+        Me.btnNavnEndre.TabIndex = 5
+        Me.btnNavnEndre.Text = "&Endre"
+        Me.btnNavnEndre.UseVisualStyleBackColor = True
+        '
+        'txtNavnProduktId
+        '
+        Me.txtNavnProduktId.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtNavnProduktId.Enabled = False
+        Me.txtNavnProduktId.Location = New System.Drawing.Point(96, 47)
+        Me.txtNavnProduktId.Name = "txtNavnProduktId"
+        Me.txtNavnProduktId.Size = New System.Drawing.Size(158, 20)
+        Me.txtNavnProduktId.TabIndex = 4
+        '
+        'lblNavnProduktId
+        '
+        Me.lblNavnProduktId.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblNavnProduktId.AutoSize = True
+        Me.lblNavnProduktId.Location = New System.Drawing.Point(15, 50)
+        Me.lblNavnProduktId.Name = "lblNavnProduktId"
+        Me.lblNavnProduktId.Size = New System.Drawing.Size(16, 13)
+        Me.lblNavnProduktId.TabIndex = 3
+        Me.lblNavnProduktId.Text = "Id"
         '
         'cbNavnProduktNavn
         '
@@ -74,7 +107,7 @@ Partial Class frmEndreProdukt
         Me.lblNavnProduktNavn.Name = "lblNavnProduktNavn"
         Me.lblNavnProduktNavn.Size = New System.Drawing.Size(33, 13)
         Me.lblNavnProduktNavn.TabIndex = 1
-        Me.lblNavnProduktNavn.Text = "Navn"
+        Me.lblNavnProduktNavn.Text = "&Navn"
         '
         'gbSokId
         '
@@ -145,40 +178,7 @@ Partial Class frmEndreProdukt
         Me.lblIdProduktid.Name = "lblIdProduktid"
         Me.lblIdProduktid.Size = New System.Drawing.Size(16, 13)
         Me.lblIdProduktid.TabIndex = 7
-        Me.lblIdProduktid.Text = "Id"
-        '
-        'lblNavnProduktId
-        '
-        Me.lblNavnProduktId.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblNavnProduktId.AutoSize = True
-        Me.lblNavnProduktId.Location = New System.Drawing.Point(15, 50)
-        Me.lblNavnProduktId.Name = "lblNavnProduktId"
-        Me.lblNavnProduktId.Size = New System.Drawing.Size(16, 13)
-        Me.lblNavnProduktId.TabIndex = 3
-        Me.lblNavnProduktId.Text = "Id"
-        '
-        'txtNavnProduktId
-        '
-        Me.txtNavnProduktId.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtNavnProduktId.Enabled = False
-        Me.txtNavnProduktId.Location = New System.Drawing.Point(96, 47)
-        Me.txtNavnProduktId.Name = "txtNavnProduktId"
-        Me.txtNavnProduktId.Size = New System.Drawing.Size(158, 20)
-        Me.txtNavnProduktId.TabIndex = 4
-        '
-        'btnNavnEndre
-        '
-        Me.btnNavnEndre.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnNavnEndre.Location = New System.Drawing.Point(179, 73)
-        Me.btnNavnEndre.Name = "btnNavnEndre"
-        Me.btnNavnEndre.Size = New System.Drawing.Size(75, 23)
-        Me.btnNavnEndre.TabIndex = 5
-        Me.btnNavnEndre.Text = "&Endre"
-        Me.btnNavnEndre.UseVisualStyleBackColor = True
+        Me.lblIdProduktid.Text = "&Id"
         '
         'frmEndreProdukt
         '

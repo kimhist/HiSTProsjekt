@@ -41,7 +41,7 @@ Partial Class frmProduktRegistrering
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblNavn.AutoSize = True
-        Me.lblNavn.Location = New System.Drawing.Point(11, 15)
+        Me.lblNavn.Location = New System.Drawing.Point(15, 15)
         Me.lblNavn.Name = "lblNavn"
         Me.lblNavn.Size = New System.Drawing.Size(33, 13)
         Me.lblNavn.TabIndex = 0
@@ -53,7 +53,7 @@ Partial Class frmProduktRegistrering
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblBeskrivelse.AutoSize = True
-        Me.lblBeskrivelse.Location = New System.Drawing.Point(11, 41)
+        Me.lblBeskrivelse.Location = New System.Drawing.Point(15, 41)
         Me.lblBeskrivelse.Name = "lblBeskrivelse"
         Me.lblBeskrivelse.Size = New System.Drawing.Size(61, 13)
         Me.lblBeskrivelse.TabIndex = 2
@@ -65,7 +65,7 @@ Partial Class frmProduktRegistrering
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblGruppe.AutoSize = True
-        Me.lblGruppe.Location = New System.Drawing.Point(11, 67)
+        Me.lblGruppe.Location = New System.Drawing.Point(15, 67)
         Me.lblGruppe.Name = "lblGruppe"
         Me.lblGruppe.Size = New System.Drawing.Size(77, 13)
         Me.lblGruppe.TabIndex = 4
@@ -76,7 +76,7 @@ Partial Class frmProduktRegistrering
         Me.txtNavn.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtNavn.Location = New System.Drawing.Point(126, 12)
+        Me.txtNavn.Location = New System.Drawing.Point(122, 12)
         Me.txtNavn.Name = "txtNavn"
         Me.txtNavn.Size = New System.Drawing.Size(146, 20)
         Me.txtNavn.TabIndex = 1
@@ -86,7 +86,7 @@ Partial Class frmProduktRegistrering
         Me.txtBeskrivelse.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtBeskrivelse.Location = New System.Drawing.Point(126, 38)
+        Me.txtBeskrivelse.Location = New System.Drawing.Point(122, 38)
         Me.txtBeskrivelse.Name = "txtBeskrivelse"
         Me.txtBeskrivelse.Size = New System.Drawing.Size(146, 20)
         Me.txtBeskrivelse.TabIndex = 3
@@ -97,7 +97,7 @@ Partial Class frmProduktRegistrering
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbProduktgruppe.FormattingEnabled = True
-        Me.cbProduktgruppe.Location = New System.Drawing.Point(126, 67)
+        Me.cbProduktgruppe.Location = New System.Drawing.Point(122, 67)
         Me.cbProduktgruppe.Name = "cbProduktgruppe"
         Me.cbProduktgruppe.Size = New System.Drawing.Size(146, 21)
         Me.cbProduktgruppe.TabIndex = 5
@@ -108,9 +108,9 @@ Partial Class frmProduktRegistrering
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.gbPriser.Controls.Add(Me.lbPriser)
-        Me.gbPriser.Location = New System.Drawing.Point(14, 128)
+        Me.gbPriser.Location = New System.Drawing.Point(18, 108)
         Me.gbPriser.Name = "gbPriser"
-        Me.gbPriser.Size = New System.Drawing.Size(256, 122)
+        Me.gbPriser.Size = New System.Drawing.Size(250, 108)
         Me.gbPriser.TabIndex = 6
         Me.gbPriser.TabStop = False
         Me.gbPriser.Text = "Priser"
@@ -121,13 +121,13 @@ Partial Class frmProduktRegistrering
         Me.lbPriser.FormattingEnabled = True
         Me.lbPriser.Location = New System.Drawing.Point(3, 16)
         Me.lbPriser.Name = "lbPriser"
-        Me.lbPriser.Size = New System.Drawing.Size(250, 103)
+        Me.lbPriser.Size = New System.Drawing.Size(244, 89)
         Me.lbPriser.TabIndex = 7
         '
         'btnLagre
         '
         Me.btnLagre.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnLagre.Location = New System.Drawing.Point(197, 278)
+        Me.btnLagre.Location = New System.Drawing.Point(193, 235)
         Me.btnLagre.Name = "btnLagre"
         Me.btnLagre.Size = New System.Drawing.Size(75, 23)
         Me.btnLagre.TabIndex = 9
@@ -137,7 +137,7 @@ Partial Class frmProduktRegistrering
         'btnAvbryt
         '
         Me.btnAvbryt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAvbryt.Location = New System.Drawing.Point(12, 278)
+        Me.btnAvbryt.Location = New System.Drawing.Point(15, 235)
         Me.btnAvbryt.Name = "btnAvbryt"
         Me.btnAvbryt.Size = New System.Drawing.Size(75, 23)
         Me.btnAvbryt.TabIndex = 8
@@ -148,7 +148,7 @@ Partial Class frmProduktRegistrering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 313)
+        Me.ClientSize = New System.Drawing.Size(284, 267)
         Me.Controls.Add(Me.btnAvbryt)
         Me.Controls.Add(Me.btnLagre)
         Me.Controls.Add(Me.gbPriser)

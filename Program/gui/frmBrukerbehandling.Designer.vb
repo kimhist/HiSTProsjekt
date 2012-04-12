@@ -47,7 +47,7 @@ Partial Class frmBrukerbehandling
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblFornavn.AutoSize = True
-        Me.lblFornavn.Location = New System.Drawing.Point(28, 15)
+        Me.lblFornavn.Location = New System.Drawing.Point(15, 15)
         Me.lblFornavn.Name = "lblFornavn"
         Me.lblFornavn.Size = New System.Drawing.Size(46, 13)
         Me.lblFornavn.TabIndex = 1
@@ -59,7 +59,7 @@ Partial Class frmBrukerbehandling
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblEtternavn.AutoSize = True
-        Me.lblEtternavn.Location = New System.Drawing.Point(28, 42)
+        Me.lblEtternavn.Location = New System.Drawing.Point(15, 43)
         Me.lblEtternavn.Name = "lblEtternavn"
         Me.lblEtternavn.Size = New System.Drawing.Size(53, 13)
         Me.lblEtternavn.TabIndex = 3
@@ -71,7 +71,7 @@ Partial Class frmBrukerbehandling
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblAdresse.AutoSize = True
-        Me.lblAdresse.Location = New System.Drawing.Point(29, 68)
+        Me.lblAdresse.Location = New System.Drawing.Point(15, 69)
         Me.lblAdresse.Name = "lblAdresse"
         Me.lblAdresse.Size = New System.Drawing.Size(45, 13)
         Me.lblAdresse.TabIndex = 5
@@ -83,7 +83,7 @@ Partial Class frmBrukerbehandling
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTelefonnr.AutoSize = True
-        Me.lblTelefonnr.Location = New System.Drawing.Point(28, 94)
+        Me.lblTelefonnr.Location = New System.Drawing.Point(15, 95)
         Me.lblTelefonnr.Name = "lblTelefonnr"
         Me.lblTelefonnr.Size = New System.Drawing.Size(52, 13)
         Me.lblTelefonnr.TabIndex = 7
@@ -95,7 +95,7 @@ Partial Class frmBrukerbehandling
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblFodt.AutoSize = True
-        Me.lblFodt.Location = New System.Drawing.Point(29, 123)
+        Me.lblFodt.Location = New System.Drawing.Point(15, 124)
         Me.lblFodt.Name = "lblFodt"
         Me.lblFodt.Size = New System.Drawing.Size(28, 13)
         Me.lblFodt.TabIndex = 9
@@ -106,9 +106,9 @@ Partial Class frmBrukerbehandling
         Me.txtFornavn.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtFornavn.Location = New System.Drawing.Point(146, 12)
+        Me.txtFornavn.Location = New System.Drawing.Point(124, 14)
         Me.txtFornavn.Name = "txtFornavn"
-        Me.txtFornavn.Size = New System.Drawing.Size(149, 20)
+        Me.txtFornavn.Size = New System.Drawing.Size(162, 20)
         Me.txtFornavn.TabIndex = 2
         '
         'txtAdresse
@@ -116,9 +116,9 @@ Partial Class frmBrukerbehandling
         Me.txtAdresse.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtAdresse.Location = New System.Drawing.Point(146, 39)
+        Me.txtAdresse.Location = New System.Drawing.Point(124, 40)
         Me.txtAdresse.Name = "txtAdresse"
-        Me.txtAdresse.Size = New System.Drawing.Size(149, 20)
+        Me.txtAdresse.Size = New System.Drawing.Size(162, 20)
         Me.txtAdresse.TabIndex = 4
         '
         'txtTelefon
@@ -126,9 +126,9 @@ Partial Class frmBrukerbehandling
         Me.txtTelefon.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtTelefon.Location = New System.Drawing.Point(146, 65)
+        Me.txtTelefon.Location = New System.Drawing.Point(124, 66)
         Me.txtTelefon.Name = "txtTelefon"
-        Me.txtTelefon.Size = New System.Drawing.Size(149, 20)
+        Me.txtTelefon.Size = New System.Drawing.Size(162, 20)
         Me.txtTelefon.TabIndex = 6
         '
         'txtFodt
@@ -136,9 +136,9 @@ Partial Class frmBrukerbehandling
         Me.txtFodt.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtFodt.Location = New System.Drawing.Point(146, 91)
+        Me.txtFodt.Location = New System.Drawing.Point(124, 92)
         Me.txtFodt.Name = "txtFodt"
-        Me.txtFodt.Size = New System.Drawing.Size(149, 20)
+        Me.txtFodt.Size = New System.Drawing.Size(162, 20)
         Me.txtFodt.TabIndex = 8
         '
         'lblStilling
@@ -147,7 +147,7 @@ Partial Class frmBrukerbehandling
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblStilling.AutoSize = True
-        Me.lblStilling.Location = New System.Drawing.Point(28, 194)
+        Me.lblStilling.Location = New System.Drawing.Point(15, 194)
         Me.lblStilling.Name = "lblStilling"
         Me.lblStilling.Size = New System.Drawing.Size(37, 13)
         Me.lblStilling.TabIndex = 11
@@ -161,9 +161,9 @@ Partial Class frmBrukerbehandling
         Me.cbStilling.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbStilling.FormattingEnabled = True
         Me.cbStilling.Items.AddRange(New Object() {"Lagerarbeider", "Selger", "Sekretær", "Daglig leder"})
-        Me.cbStilling.Location = New System.Drawing.Point(146, 191)
+        Me.cbStilling.Location = New System.Drawing.Point(124, 191)
         Me.cbStilling.Name = "cbStilling"
-        Me.cbStilling.Size = New System.Drawing.Size(149, 21)
+        Me.cbStilling.Size = New System.Drawing.Size(162, 21)
         Me.cbStilling.TabIndex = 12
         '
         'DateTimePicker1
@@ -171,9 +171,9 @@ Partial Class frmBrukerbehandling
         Me.DateTimePicker1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DateTimePicker1.Location = New System.Drawing.Point(146, 117)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(124, 118)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(149, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(162, 20)
         Me.DateTimePicker1.TabIndex = 10
         '
         'lblBrukernavn
@@ -182,7 +182,7 @@ Partial Class frmBrukerbehandling
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblBrukernavn.AutoSize = True
-        Me.lblBrukernavn.Location = New System.Drawing.Point(29, 221)
+        Me.lblBrukernavn.Location = New System.Drawing.Point(15, 221)
         Me.lblBrukernavn.Name = "lblBrukernavn"
         Me.lblBrukernavn.Size = New System.Drawing.Size(62, 13)
         Me.lblBrukernavn.TabIndex = 13
@@ -194,7 +194,7 @@ Partial Class frmBrukerbehandling
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblPassord.AutoSize = True
-        Me.lblPassord.Location = New System.Drawing.Point(29, 247)
+        Me.lblPassord.Location = New System.Drawing.Point(15, 247)
         Me.lblPassord.Name = "lblPassord"
         Me.lblPassord.Size = New System.Drawing.Size(45, 13)
         Me.lblPassord.TabIndex = 15
@@ -205,9 +205,9 @@ Partial Class frmBrukerbehandling
         Me.TextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Location = New System.Drawing.Point(146, 218)
+        Me.TextBox1.Location = New System.Drawing.Point(124, 218)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(149, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(162, 20)
         Me.TextBox1.TabIndex = 14
         '
         'TextBox2
@@ -215,15 +215,15 @@ Partial Class frmBrukerbehandling
         Me.TextBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Location = New System.Drawing.Point(146, 244)
+        Me.TextBox2.Location = New System.Drawing.Point(124, 244)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(149, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(162, 20)
         Me.TextBox2.TabIndex = 16
         '
         'btnLagre
         '
         Me.btnLagre.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnLagre.Location = New System.Drawing.Point(220, 296)
+        Me.btnLagre.Location = New System.Drawing.Point(216, 276)
         Me.btnLagre.Name = "btnLagre"
         Me.btnLagre.Size = New System.Drawing.Size(75, 23)
         Me.btnLagre.TabIndex = 17
@@ -234,7 +234,7 @@ Partial Class frmBrukerbehandling
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(323, 331)
+        Me.ClientSize = New System.Drawing.Size(303, 311)
         Me.Controls.Add(Me.btnLagre)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
