@@ -95,6 +95,7 @@ Partial Class frmEndreBruker
         Me.Controls.Add(Me.cbNavn)
         Me.Controls.Add(Me.lblNavn)
         Me.Controls.Add(Me.btnNeste)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmEndreBruker"
         Me.Text = "Endre bruker"
         Me.ResumeLayout(False)

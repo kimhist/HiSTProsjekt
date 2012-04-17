@@ -84,10 +84,28 @@
     <Compile Include="gui\frmEndreBruker.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="gui\frmEndrePakke.Designer.vb">
+      <DependentUpon>frmEndrePakke.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmEndrePakke.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="gui\frmEndreProdukt.Designer.vb">
       <DependentUpon>frmEndreProdukt.vb</DependentUpon>
     </Compile>
     <Compile Include="gui\frmEndreProdukt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmEndreUtleie.Designer.vb">
+      <DependentUpon>frmEndreUtleie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmEndreUtleie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmHoved.Designer.vb">
+      <DependentUpon>frmHoved.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmHoved.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="gui\frmLogin.Designer.vb">
@@ -96,10 +114,22 @@
     <Compile Include="gui\frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="gui\frmPakkeregistrering.Designer.vb">
+      <DependentUpon>frmPakkeregistrering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmPakkeregistrering.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="gui\frmProduktregistrering.Designer.vb">
       <DependentUpon>frmProduktregistrering.vb</DependentUpon>
     </Compile>
     <Compile Include="gui\frmProduktregistrering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmStatistikk.Designer.vb">
+      <DependentUpon>frmStatistikk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmStatistikk.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="gui\frmUtleieregistrering.Designer.vb">
@@ -134,6 +164,9 @@
     <EmbeddedResource Include="gui\frmEndreProdukt.resx">
       <DependentUpon>frmEndreProdukt.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmHoved.resx">
+      <DependentUpon>frmHoved.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="gui\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +193,12 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\confirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

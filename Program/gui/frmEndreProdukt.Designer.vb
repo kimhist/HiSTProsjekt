@@ -187,6 +187,7 @@ Partial Class frmEndreProdukt
         Me.ClientSize = New System.Drawing.Size(284, 255)
         Me.Controls.Add(Me.gbSokId)
         Me.Controls.Add(Me.gbSokNavn)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmEndreProdukt"
         Me.Text = "Endre produkt"
         Me.gbSokNavn.ResumeLayout(False)
