@@ -31,7 +31,7 @@ Partial Class frmLogin
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(221, 178)
+        Me.btnLogin.Location = New System.Drawing.Point(225, 64)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(71, 23)
         Me.btnLogin.TabIndex = 2
@@ -41,7 +41,7 @@ Partial Class frmLogin
         'lblBrukernavn
         '
         Me.lblBrukernavn.AutoSize = True
-        Me.lblBrukernavn.Location = New System.Drawing.Point(12, 65)
+        Me.lblBrukernavn.Location = New System.Drawing.Point(16, 15)
         Me.lblBrukernavn.Name = "lblBrukernavn"
         Me.lblBrukernavn.Size = New System.Drawing.Size(62, 13)
         Me.lblBrukernavn.TabIndex = 1
@@ -50,7 +50,7 @@ Partial Class frmLogin
         'lblPassord
         '
         Me.lblPassord.AutoSize = True
-        Me.lblPassord.Location = New System.Drawing.Point(12, 99)
+        Me.lblPassord.Location = New System.Drawing.Point(16, 41)
         Me.lblPassord.Name = "lblPassord"
         Me.lblPassord.Size = New System.Drawing.Size(45, 13)
         Me.lblPassord.TabIndex = 2
@@ -58,14 +58,14 @@ Partial Class frmLogin
         '
         'txtBrukernavn
         '
-        Me.txtBrukernavn.Location = New System.Drawing.Point(157, 62)
+        Me.txtBrukernavn.Location = New System.Drawing.Point(161, 12)
         Me.txtBrukernavn.Name = "txtBrukernavn"
         Me.txtBrukernavn.Size = New System.Drawing.Size(135, 20)
         Me.txtBrukernavn.TabIndex = 0
         '
         'txtPassord
         '
-        Me.txtPassord.Location = New System.Drawing.Point(157, 96)
+        Me.txtPassord.Location = New System.Drawing.Point(161, 38)
         Me.txtPassord.Name = "txtPassord"
         Me.txtPassord.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassord.Size = New System.Drawing.Size(135, 20)
@@ -75,7 +75,7 @@ Partial Class frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(308, 213)
+        Me.ClientSize = New System.Drawing.Size(308, 98)
         Me.Controls.Add(Me.txtPassord)
         Me.Controls.Add(Me.txtBrukernavn)
         Me.Controls.Add(Me.lblPassord)
