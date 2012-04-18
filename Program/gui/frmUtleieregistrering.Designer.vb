@@ -24,26 +24,24 @@ Partial Class frmUtleieregistrering
     Private Sub InitializeComponent()
         Me.scMain = New System.Windows.Forms.SplitContainer()
         Me.gbKunde = New System.Windows.Forms.GroupBox()
-        Me.scKunde = New System.Windows.Forms.SplitContainer()
         Me.txtKundeSkonr = New System.Windows.Forms.TextBox()
-        Me.lblKundeSkonr = New System.Windows.Forms.Label()
-        Me.txtKundeVekt = New System.Windows.Forms.TextBox()
-        Me.lblKundeVekt = New System.Windows.Forms.Label()
-        Me.txtKundeHoyde = New System.Windows.Forms.TextBox()
-        Me.lblKundeHoyde = New System.Windows.Forms.Label()
-        Me.txtKundeAdresse = New System.Windows.Forms.TextBox()
-        Me.lblKundeAdresse = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.lblKundeNavn = New System.Windows.Forms.Label()
         Me.scKundeButtons = New System.Windows.Forms.SplitContainer()
         Me.btnKundeEndre = New System.Windows.Forms.Button()
         Me.btnKundeOpprett = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.lblKundeSkonr = New System.Windows.Forms.Label()
+        Me.lblKundeAdresse = New System.Windows.Forms.Label()
+        Me.txtKundeAdresse = New System.Windows.Forms.TextBox()
+        Me.txtKundeVekt = New System.Windows.Forms.TextBox()
+        Me.lblKundeNavn = New System.Windows.Forms.Label()
+        Me.lblKundeHoyde = New System.Windows.Forms.Label()
+        Me.lblKundeVekt = New System.Windows.Forms.Label()
+        Me.txtKundeHoyde = New System.Windows.Forms.TextBox()
         Me.dtpTil = New System.Windows.Forms.DateTimePicker()
         Me.dtpFra = New System.Windows.Forms.DateTimePicker()
         Me.lblTil = New System.Windows.Forms.Label()
         Me.lblFra = New System.Windows.Forms.Label()
         Me.gbProdukt = New System.Windows.Forms.GroupBox()
-        Me.scProdukt = New System.Windows.Forms.SplitContainer()
         Me.lbProdukt = New System.Windows.Forms.ListBox()
         Me.scProduktButtons = New System.Windows.Forms.SplitContainer()
         Me.btnProduktFjern = New System.Windows.Forms.Button()
@@ -53,19 +51,11 @@ Partial Class frmUtleieregistrering
         Me.scMain.Panel2.SuspendLayout()
         Me.scMain.SuspendLayout()
         Me.gbKunde.SuspendLayout()
-        CType(Me.scKunde, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.scKunde.Panel1.SuspendLayout()
-        Me.scKunde.Panel2.SuspendLayout()
-        Me.scKunde.SuspendLayout()
         CType(Me.scKundeButtons, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.scKundeButtons.Panel1.SuspendLayout()
         Me.scKundeButtons.Panel2.SuspendLayout()
         Me.scKundeButtons.SuspendLayout()
         Me.gbProdukt.SuspendLayout()
-        CType(Me.scProdukt, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.scProdukt.Panel1.SuspendLayout()
-        Me.scProdukt.Panel2.SuspendLayout()
-        Me.scProdukt.SuspendLayout()
         CType(Me.scProduktButtons, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.scProduktButtons.Panel1.SuspendLayout()
         Me.scProduktButtons.Panel2.SuspendLayout()
@@ -74,6 +64,7 @@ Partial Class frmUtleieregistrering
         '
         'scMain
         '
+        Me.scMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.scMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.scMain.Location = New System.Drawing.Point(0, 0)
         Me.scMain.Name = "scMain"
@@ -91,136 +82,47 @@ Partial Class frmUtleieregistrering
         '
         Me.scMain.Panel2.Controls.Add(Me.gbProdukt)
         Me.scMain.Panel2MinSize = 300
-        Me.scMain.Size = New System.Drawing.Size(604, 590)
-        Me.scMain.SplitterDistance = 300
+        Me.scMain.Size = New System.Drawing.Size(660, 560)
+        Me.scMain.SplitterDistance = 327
         Me.scMain.TabIndex = 0
+        Me.scMain.TabStop = False
         '
         'gbKunde
         '
-        Me.gbKunde.Controls.Add(Me.scKunde)
+        Me.gbKunde.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gbKunde.Controls.Add(Me.txtKundeSkonr)
+        Me.gbKunde.Controls.Add(Me.scKundeButtons)
+        Me.gbKunde.Controls.Add(Me.ComboBox1)
+        Me.gbKunde.Controls.Add(Me.lblKundeSkonr)
+        Me.gbKunde.Controls.Add(Me.lblKundeAdresse)
+        Me.gbKunde.Controls.Add(Me.txtKundeAdresse)
+        Me.gbKunde.Controls.Add(Me.txtKundeVekt)
+        Me.gbKunde.Controls.Add(Me.lblKundeNavn)
+        Me.gbKunde.Controls.Add(Me.lblKundeHoyde)
+        Me.gbKunde.Controls.Add(Me.lblKundeVekt)
+        Me.gbKunde.Controls.Add(Me.txtKundeHoyde)
         Me.gbKunde.Location = New System.Drawing.Point(12, 88)
         Me.gbKunde.Name = "gbKunde"
-        Me.gbKunde.Size = New System.Drawing.Size(285, 226)
+        Me.gbKunde.Size = New System.Drawing.Size(302, 212)
         Me.gbKunde.TabIndex = 8
         Me.gbKunde.TabStop = False
         Me.gbKunde.Text = "Kunde"
         '
-        'scKunde
-        '
-        Me.scKunde.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.scKunde.Location = New System.Drawing.Point(3, 16)
-        Me.scKunde.Name = "scKunde"
-        Me.scKunde.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'scKunde.Panel1
-        '
-        Me.scKunde.Panel1.Controls.Add(Me.txtKundeSkonr)
-        Me.scKunde.Panel1.Controls.Add(Me.lblKundeSkonr)
-        Me.scKunde.Panel1.Controls.Add(Me.txtKundeVekt)
-        Me.scKunde.Panel1.Controls.Add(Me.lblKundeVekt)
-        Me.scKunde.Panel1.Controls.Add(Me.txtKundeHoyde)
-        Me.scKunde.Panel1.Controls.Add(Me.lblKundeHoyde)
-        Me.scKunde.Panel1.Controls.Add(Me.txtKundeAdresse)
-        Me.scKunde.Panel1.Controls.Add(Me.lblKundeAdresse)
-        Me.scKunde.Panel1.Controls.Add(Me.ComboBox1)
-        Me.scKunde.Panel1.Controls.Add(Me.lblKundeNavn)
-        '
-        'scKunde.Panel2
-        '
-        Me.scKunde.Panel2.Controls.Add(Me.scKundeButtons)
-        Me.scKunde.Size = New System.Drawing.Size(279, 207)
-        Me.scKunde.SplitterDistance = 173
-        Me.scKunde.TabIndex = 0
-        '
         'txtKundeSkonr
         '
+        Me.txtKundeSkonr.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtKundeSkonr.Enabled = False
-        Me.txtKundeSkonr.Location = New System.Drawing.Point(91, 139)
+        Me.txtKundeSkonr.Location = New System.Drawing.Point(94, 145)
         Me.txtKundeSkonr.Name = "txtKundeSkonr"
-        Me.txtKundeSkonr.Size = New System.Drawing.Size(86, 20)
-        Me.txtKundeSkonr.TabIndex = 9
-        '
-        'lblKundeSkonr
-        '
-        Me.lblKundeSkonr.AutoSize = True
-        Me.lblKundeSkonr.Location = New System.Drawing.Point(18, 142)
-        Me.lblKundeSkonr.Name = "lblKundeSkonr"
-        Me.lblKundeSkonr.Size = New System.Drawing.Size(63, 13)
-        Me.lblKundeSkonr.TabIndex = 8
-        Me.lblKundeSkonr.Text = "Skonummer"
-        '
-        'txtKundeVekt
-        '
-        Me.txtKundeVekt.Enabled = False
-        Me.txtKundeVekt.Location = New System.Drawing.Point(91, 113)
-        Me.txtKundeVekt.Name = "txtKundeVekt"
-        Me.txtKundeVekt.Size = New System.Drawing.Size(86, 20)
-        Me.txtKundeVekt.TabIndex = 7
-        '
-        'lblKundeVekt
-        '
-        Me.lblKundeVekt.AutoSize = True
-        Me.lblKundeVekt.Location = New System.Drawing.Point(18, 116)
-        Me.lblKundeVekt.Name = "lblKundeVekt"
-        Me.lblKundeVekt.Size = New System.Drawing.Size(29, 13)
-        Me.lblKundeVekt.TabIndex = 6
-        Me.lblKundeVekt.Text = "Vekt"
-        '
-        'txtKundeHoyde
-        '
-        Me.txtKundeHoyde.Enabled = False
-        Me.txtKundeHoyde.Location = New System.Drawing.Point(91, 87)
-        Me.txtKundeHoyde.Name = "txtKundeHoyde"
-        Me.txtKundeHoyde.Size = New System.Drawing.Size(86, 20)
-        Me.txtKundeHoyde.TabIndex = 5
-        '
-        'lblKundeHoyde
-        '
-        Me.lblKundeHoyde.AutoSize = True
-        Me.lblKundeHoyde.Location = New System.Drawing.Point(18, 90)
-        Me.lblKundeHoyde.Name = "lblKundeHoyde"
-        Me.lblKundeHoyde.Size = New System.Drawing.Size(38, 13)
-        Me.lblKundeHoyde.TabIndex = 4
-        Me.lblKundeHoyde.Text = "Høyde"
-        '
-        'txtKundeAdresse
-        '
-        Me.txtKundeAdresse.Enabled = False
-        Me.txtKundeAdresse.Location = New System.Drawing.Point(91, 40)
-        Me.txtKundeAdresse.Name = "txtKundeAdresse"
-        Me.txtKundeAdresse.Size = New System.Drawing.Size(181, 20)
-        Me.txtKundeAdresse.TabIndex = 3
-        '
-        'lblKundeAdresse
-        '
-        Me.lblKundeAdresse.AutoSize = True
-        Me.lblKundeAdresse.Location = New System.Drawing.Point(18, 43)
-        Me.lblKundeAdresse.Name = "lblKundeAdresse"
-        Me.lblKundeAdresse.Size = New System.Drawing.Size(45, 13)
-        Me.lblKundeAdresse.TabIndex = 2
-        Me.lblKundeAdresse.Text = "Adresse"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(91, 13)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(181, 21)
-        Me.ComboBox1.TabIndex = 1
-        '
-        'lblKundeNavn
-        '
-        Me.lblKundeNavn.AutoSize = True
-        Me.lblKundeNavn.Location = New System.Drawing.Point(18, 16)
-        Me.lblKundeNavn.Name = "lblKundeNavn"
-        Me.lblKundeNavn.Size = New System.Drawing.Size(33, 13)
-        Me.lblKundeNavn.TabIndex = 0
-        Me.lblKundeNavn.Text = "Navn"
+        Me.txtKundeSkonr.Size = New System.Drawing.Size(91, 20)
+        Me.txtKundeSkonr.TabIndex = 13
         '
         'scKundeButtons
         '
-        Me.scKundeButtons.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.scKundeButtons.Location = New System.Drawing.Point(0, 0)
+        Me.scKundeButtons.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.scKundeButtons.Location = New System.Drawing.Point(3, 182)
         Me.scKundeButtons.Name = "scKundeButtons"
         '
         'scKundeButtons.Panel1
@@ -230,18 +132,19 @@ Partial Class frmUtleieregistrering
         'scKundeButtons.Panel2
         '
         Me.scKundeButtons.Panel2.Controls.Add(Me.btnKundeOpprett)
-        Me.scKundeButtons.Size = New System.Drawing.Size(279, 30)
-        Me.scKundeButtons.SplitterDistance = 139
+        Me.scKundeButtons.Size = New System.Drawing.Size(296, 27)
+        Me.scKundeButtons.SplitterDistance = 147
         Me.scKundeButtons.TabIndex = 0
+        Me.scKundeButtons.TabStop = False
         '
         'btnKundeEndre
         '
         Me.btnKundeEndre.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnKundeEndre.Location = New System.Drawing.Point(0, 0)
         Me.btnKundeEndre.Name = "btnKundeEndre"
-        Me.btnKundeEndre.Size = New System.Drawing.Size(139, 30)
-        Me.btnKundeEndre.TabIndex = 1
-        Me.btnKundeEndre.Text = "Endre"
+        Me.btnKundeEndre.Size = New System.Drawing.Size(147, 27)
+        Me.btnKundeEndre.TabIndex = 14
+        Me.btnKundeEndre.Text = "&Endre"
         Me.btnKundeEndre.UseVisualStyleBackColor = True
         '
         'btnKundeOpprett
@@ -249,24 +152,127 @@ Partial Class frmUtleieregistrering
         Me.btnKundeOpprett.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnKundeOpprett.Location = New System.Drawing.Point(0, 0)
         Me.btnKundeOpprett.Name = "btnKundeOpprett"
-        Me.btnKundeOpprett.Size = New System.Drawing.Size(136, 30)
-        Me.btnKundeOpprett.TabIndex = 1
-        Me.btnKundeOpprett.Text = "Opprett"
+        Me.btnKundeOpprett.Size = New System.Drawing.Size(145, 27)
+        Me.btnKundeOpprett.TabIndex = 15
+        Me.btnKundeOpprett.Text = "&Opprett ny"
         Me.btnKundeOpprett.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(94, 19)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(198, 21)
+        Me.ComboBox1.TabIndex = 5
+        '
+        'lblKundeSkonr
+        '
+        Me.lblKundeSkonr.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblKundeSkonr.AutoSize = True
+        Me.lblKundeSkonr.Location = New System.Drawing.Point(21, 148)
+        Me.lblKundeSkonr.Name = "lblKundeSkonr"
+        Me.lblKundeSkonr.Size = New System.Drawing.Size(63, 13)
+        Me.lblKundeSkonr.TabIndex = 12
+        Me.lblKundeSkonr.Text = "Skonummer"
+        '
+        'lblKundeAdresse
+        '
+        Me.lblKundeAdresse.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblKundeAdresse.AutoSize = True
+        Me.lblKundeAdresse.Location = New System.Drawing.Point(21, 49)
+        Me.lblKundeAdresse.Name = "lblKundeAdresse"
+        Me.lblKundeAdresse.Size = New System.Drawing.Size(45, 13)
+        Me.lblKundeAdresse.TabIndex = 6
+        Me.lblKundeAdresse.Text = "Adresse"
+        '
+        'txtKundeAdresse
+        '
+        Me.txtKundeAdresse.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtKundeAdresse.Enabled = False
+        Me.txtKundeAdresse.Location = New System.Drawing.Point(94, 46)
+        Me.txtKundeAdresse.Name = "txtKundeAdresse"
+        Me.txtKundeAdresse.Size = New System.Drawing.Size(198, 20)
+        Me.txtKundeAdresse.TabIndex = 7
+        '
+        'txtKundeVekt
+        '
+        Me.txtKundeVekt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtKundeVekt.Enabled = False
+        Me.txtKundeVekt.Location = New System.Drawing.Point(94, 119)
+        Me.txtKundeVekt.Name = "txtKundeVekt"
+        Me.txtKundeVekt.Size = New System.Drawing.Size(91, 20)
+        Me.txtKundeVekt.TabIndex = 11
+        '
+        'lblKundeNavn
+        '
+        Me.lblKundeNavn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblKundeNavn.AutoSize = True
+        Me.lblKundeNavn.Location = New System.Drawing.Point(21, 22)
+        Me.lblKundeNavn.Name = "lblKundeNavn"
+        Me.lblKundeNavn.Size = New System.Drawing.Size(33, 13)
+        Me.lblKundeNavn.TabIndex = 4
+        Me.lblKundeNavn.Text = "&Navn"
+        '
+        'lblKundeHoyde
+        '
+        Me.lblKundeHoyde.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblKundeHoyde.AutoSize = True
+        Me.lblKundeHoyde.Location = New System.Drawing.Point(21, 96)
+        Me.lblKundeHoyde.Name = "lblKundeHoyde"
+        Me.lblKundeHoyde.Size = New System.Drawing.Size(38, 13)
+        Me.lblKundeHoyde.TabIndex = 8
+        Me.lblKundeHoyde.Text = "Høyde"
+        '
+        'lblKundeVekt
+        '
+        Me.lblKundeVekt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblKundeVekt.AutoSize = True
+        Me.lblKundeVekt.Location = New System.Drawing.Point(21, 122)
+        Me.lblKundeVekt.Name = "lblKundeVekt"
+        Me.lblKundeVekt.Size = New System.Drawing.Size(29, 13)
+        Me.lblKundeVekt.TabIndex = 10
+        Me.lblKundeVekt.Text = "Vekt"
+        '
+        'txtKundeHoyde
+        '
+        Me.txtKundeHoyde.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtKundeHoyde.Enabled = False
+        Me.txtKundeHoyde.Location = New System.Drawing.Point(94, 93)
+        Me.txtKundeHoyde.Name = "txtKundeHoyde"
+        Me.txtKundeHoyde.Size = New System.Drawing.Size(91, 20)
+        Me.txtKundeHoyde.TabIndex = 9
         '
         'dtpTil
         '
+        Me.dtpTil.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtpTil.CustomFormat = "yyyy-MM-dd HH:mm"
+        Me.dtpTil.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpTil.Location = New System.Drawing.Point(106, 36)
         Me.dtpTil.Name = "dtpTil"
-        Me.dtpTil.Size = New System.Drawing.Size(181, 20)
-        Me.dtpTil.TabIndex = 7
+        Me.dtpTil.Size = New System.Drawing.Size(208, 20)
+        Me.dtpTil.TabIndex = 3
         '
         'dtpFra
         '
+        Me.dtpFra.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtpFra.CustomFormat = "yyyy-MM-dd HH:mm"
+        Me.dtpFra.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpFra.Location = New System.Drawing.Point(106, 10)
         Me.dtpFra.Name = "dtpFra"
-        Me.dtpFra.Size = New System.Drawing.Size(181, 20)
-        Me.dtpFra.TabIndex = 6
+        Me.dtpFra.Size = New System.Drawing.Size(208, 20)
+        Me.dtpFra.TabIndex = 1
         '
         'lblTil
         '
@@ -277,8 +283,8 @@ Partial Class frmUtleieregistrering
         Me.lblTil.Location = New System.Drawing.Point(15, 39)
         Me.lblTil.Name = "lblTil"
         Me.lblTil.Size = New System.Drawing.Size(18, 13)
-        Me.lblTil.TabIndex = 5
-        Me.lblTil.Text = "Til"
+        Me.lblTil.TabIndex = 2
+        Me.lblTil.Text = "&Til"
         '
         'lblFra
         '
@@ -289,50 +295,38 @@ Partial Class frmUtleieregistrering
         Me.lblFra.Location = New System.Drawing.Point(15, 15)
         Me.lblFra.Name = "lblFra"
         Me.lblFra.Size = New System.Drawing.Size(22, 13)
-        Me.lblFra.TabIndex = 4
-        Me.lblFra.Text = "Fra"
+        Me.lblFra.TabIndex = 0
+        Me.lblFra.Text = "&Fra"
         '
         'gbProdukt
         '
-        Me.gbProdukt.Controls.Add(Me.scProdukt)
-        Me.gbProdukt.Location = New System.Drawing.Point(15, 15)
+        Me.gbProdukt.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gbProdukt.Controls.Add(Me.lbProdukt)
+        Me.gbProdukt.Controls.Add(Me.scProduktButtons)
+        Me.gbProdukt.Location = New System.Drawing.Point(12, 6)
         Me.gbProdukt.Name = "gbProdukt"
-        Me.gbProdukt.Size = New System.Drawing.Size(269, 209)
+        Me.gbProdukt.Size = New System.Drawing.Size(304, 294)
         Me.gbProdukt.TabIndex = 6
         Me.gbProdukt.TabStop = False
         Me.gbProdukt.Text = "Produkt"
         '
-        'scProdukt
-        '
-        Me.scProdukt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.scProdukt.Location = New System.Drawing.Point(3, 16)
-        Me.scProdukt.Name = "scProdukt"
-        Me.scProdukt.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'scProdukt.Panel1
-        '
-        Me.scProdukt.Panel1.Controls.Add(Me.lbProdukt)
-        '
-        'scProdukt.Panel2
-        '
-        Me.scProdukt.Panel2.Controls.Add(Me.scProduktButtons)
-        Me.scProdukt.Size = New System.Drawing.Size(263, 190)
-        Me.scProdukt.SplitterDistance = 159
-        Me.scProdukt.TabIndex = 1
-        '
         'lbProdukt
         '
-        Me.lbProdukt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProdukt.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbProdukt.FormattingEnabled = True
-        Me.lbProdukt.Location = New System.Drawing.Point(0, 0)
+        Me.lbProdukt.Location = New System.Drawing.Point(6, 19)
         Me.lbProdukt.Name = "lbProdukt"
-        Me.lbProdukt.Size = New System.Drawing.Size(263, 159)
-        Me.lbProdukt.TabIndex = 1
+        Me.lbProdukt.Size = New System.Drawing.Size(292, 238)
+        Me.lbProdukt.TabIndex = 16
         '
         'scProduktButtons
         '
-        Me.scProduktButtons.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.scProduktButtons.Location = New System.Drawing.Point(0, 0)
+        Me.scProduktButtons.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.scProduktButtons.Location = New System.Drawing.Point(3, 264)
         Me.scProduktButtons.Name = "scProduktButtons"
         '
         'scProduktButtons.Panel1
@@ -342,35 +336,36 @@ Partial Class frmUtleieregistrering
         'scProduktButtons.Panel2
         '
         Me.scProduktButtons.Panel2.Controls.Add(Me.btnProduktLeggTil)
-        Me.scProduktButtons.Size = New System.Drawing.Size(263, 27)
-        Me.scProduktButtons.SplitterDistance = 131
+        Me.scProduktButtons.Size = New System.Drawing.Size(298, 27)
+        Me.scProduktButtons.SplitterDistance = 147
         Me.scProduktButtons.TabIndex = 1
+        Me.scProduktButtons.TabStop = False
         '
         'btnProduktFjern
         '
-        Me.btnProduktFjern.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnProduktFjern.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnProduktFjern.Location = New System.Drawing.Point(0, 0)
         Me.btnProduktFjern.Name = "btnProduktFjern"
-        Me.btnProduktFjern.Size = New System.Drawing.Size(131, 27)
-        Me.btnProduktFjern.TabIndex = 1
-        Me.btnProduktFjern.Text = "Fjern"
+        Me.btnProduktFjern.Size = New System.Drawing.Size(147, 27)
+        Me.btnProduktFjern.TabIndex = 17
+        Me.btnProduktFjern.Text = "&Fjern"
         Me.btnProduktFjern.UseVisualStyleBackColor = True
         '
         'btnProduktLeggTil
         '
-        Me.btnProduktLeggTil.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnProduktLeggTil.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnProduktLeggTil.Location = New System.Drawing.Point(0, 0)
         Me.btnProduktLeggTil.Name = "btnProduktLeggTil"
-        Me.btnProduktLeggTil.Size = New System.Drawing.Size(128, 27)
-        Me.btnProduktLeggTil.TabIndex = 1
-        Me.btnProduktLeggTil.Text = "Legg til"
+        Me.btnProduktLeggTil.Size = New System.Drawing.Size(147, 27)
+        Me.btnProduktLeggTil.TabIndex = 18
+        Me.btnProduktLeggTil.Text = "&Legg til"
         Me.btnProduktLeggTil.UseVisualStyleBackColor = True
         '
         'frmUtleieregistrering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(604, 590)
+        Me.ClientSize = New System.Drawing.Size(660, 560)
         Me.Controls.Add(Me.scMain)
         Me.Name = "frmUtleieregistrering"
         Me.Text = "Utleieregistrering"
@@ -380,20 +375,12 @@ Partial Class frmUtleieregistrering
         CType(Me.scMain, System.ComponentModel.ISupportInitialize).EndInit()
         Me.scMain.ResumeLayout(False)
         Me.gbKunde.ResumeLayout(False)
-        Me.scKunde.Panel1.ResumeLayout(False)
-        Me.scKunde.Panel1.PerformLayout()
-        Me.scKunde.Panel2.ResumeLayout(False)
-        CType(Me.scKunde, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.scKunde.ResumeLayout(False)
+        Me.gbKunde.PerformLayout()
         Me.scKundeButtons.Panel1.ResumeLayout(False)
         Me.scKundeButtons.Panel2.ResumeLayout(False)
         CType(Me.scKundeButtons, System.ComponentModel.ISupportInitialize).EndInit()
         Me.scKundeButtons.ResumeLayout(False)
         Me.gbProdukt.ResumeLayout(False)
-        Me.scProdukt.Panel1.ResumeLayout(False)
-        Me.scProdukt.Panel2.ResumeLayout(False)
-        CType(Me.scProdukt, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.scProdukt.ResumeLayout(False)
         Me.scProduktButtons.Panel1.ResumeLayout(False)
         Me.scProduktButtons.Panel2.ResumeLayout(False)
         CType(Me.scProduktButtons, System.ComponentModel.ISupportInitialize).EndInit()
@@ -407,16 +394,10 @@ Partial Class frmUtleieregistrering
     Friend WithEvents lblTil As System.Windows.Forms.Label
     Friend WithEvents lblFra As System.Windows.Forms.Label
     Friend WithEvents gbKunde As System.Windows.Forms.GroupBox
-    Friend WithEvents scKunde As System.Windows.Forms.SplitContainer
     Friend WithEvents scKundeButtons As System.Windows.Forms.SplitContainer
     Friend WithEvents btnKundeEndre As System.Windows.Forms.Button
     Friend WithEvents btnKundeOpprett As System.Windows.Forms.Button
     Friend WithEvents gbProdukt As System.Windows.Forms.GroupBox
-    Friend WithEvents scProdukt As System.Windows.Forms.SplitContainer
-    Friend WithEvents scProduktButtons As System.Windows.Forms.SplitContainer
-    Friend WithEvents btnProduktFjern As System.Windows.Forms.Button
-    Friend WithEvents btnProduktLeggTil As System.Windows.Forms.Button
-    Friend WithEvents lbProdukt As System.Windows.Forms.ListBox
     Friend WithEvents txtKundeAdresse As System.Windows.Forms.TextBox
     Friend WithEvents lblKundeAdresse As System.Windows.Forms.Label
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
@@ -427,4 +408,8 @@ Partial Class frmUtleieregistrering
     Friend WithEvents lblKundeHoyde As System.Windows.Forms.Label
     Friend WithEvents txtKundeSkonr As System.Windows.Forms.TextBox
     Friend WithEvents lblKundeSkonr As System.Windows.Forms.Label
+    Friend WithEvents lbProdukt As System.Windows.Forms.ListBox
+    Friend WithEvents scProduktButtons As System.Windows.Forms.SplitContainer
+    Friend WithEvents btnProduktFjern As System.Windows.Forms.Button
+    Friend WithEvents btnProduktLeggTil As System.Windows.Forms.Button
 End Class

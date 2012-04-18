@@ -29,10 +29,17 @@ Partial Class frmProduktRegistrering
         Me.txtBeskrivelse = New System.Windows.Forms.TextBox()
         Me.cbProduktgruppe = New System.Windows.Forms.ComboBox()
         Me.gbPriser = New System.Windows.Forms.GroupBox()
+        Me.scPriserButtons = New System.Windows.Forms.SplitContainer()
+        Me.btnPriserFjern = New System.Windows.Forms.Button()
+        Me.btnPrisLeggTil = New System.Windows.Forms.Button()
         Me.lbPriser = New System.Windows.Forms.ListBox()
-        Me.btnLagre = New System.Windows.Forms.Button()
         Me.btnAvbryt = New System.Windows.Forms.Button()
+        Me.btnLagre = New System.Windows.Forms.Button()
         Me.gbPriser.SuspendLayout()
+        CType(Me.scPriserButtons, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.scPriserButtons.Panel1.SuspendLayout()
+        Me.scPriserButtons.Panel2.SuspendLayout()
+        Me.scPriserButtons.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblNavn
@@ -45,7 +52,7 @@ Partial Class frmProduktRegistrering
         Me.lblNavn.Name = "lblNavn"
         Me.lblNavn.Size = New System.Drawing.Size(33, 13)
         Me.lblNavn.TabIndex = 0
-        Me.lblNavn.Text = "Navn"
+        Me.lblNavn.Text = "&Navn"
         '
         'lblBeskrivelse
         '
@@ -57,7 +64,7 @@ Partial Class frmProduktRegistrering
         Me.lblBeskrivelse.Name = "lblBeskrivelse"
         Me.lblBeskrivelse.Size = New System.Drawing.Size(61, 13)
         Me.lblBeskrivelse.TabIndex = 2
-        Me.lblBeskrivelse.Text = "Beskrivelse"
+        Me.lblBeskrivelse.Text = "&Beskrivelse"
         '
         'lblGruppe
         '
@@ -69,7 +76,7 @@ Partial Class frmProduktRegistrering
         Me.lblGruppe.Name = "lblGruppe"
         Me.lblGruppe.Size = New System.Drawing.Size(77, 13)
         Me.lblGruppe.TabIndex = 4
-        Me.lblGruppe.Text = "Produktgruppe"
+        Me.lblGruppe.Text = "&Produktgruppe"
         '
         'txtNavn
         '
@@ -107,48 +114,95 @@ Partial Class frmProduktRegistrering
         Me.gbPriser.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gbPriser.Controls.Add(Me.scPriserButtons)
         Me.gbPriser.Controls.Add(Me.lbPriser)
         Me.gbPriser.Location = New System.Drawing.Point(18, 108)
         Me.gbPriser.Name = "gbPriser"
-        Me.gbPriser.Size = New System.Drawing.Size(250, 108)
+        Me.gbPriser.Size = New System.Drawing.Size(250, 157)
         Me.gbPriser.TabIndex = 6
         Me.gbPriser.TabStop = False
         Me.gbPriser.Text = "Priser"
         '
+        'scPriserButtons
+        '
+        Me.scPriserButtons.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.scPriserButtons.Location = New System.Drawing.Point(3, 129)
+        Me.scPriserButtons.Name = "scPriserButtons"
+        '
+        'scPriserButtons.Panel1
+        '
+        Me.scPriserButtons.Panel1.Controls.Add(Me.btnPriserFjern)
+        '
+        'scPriserButtons.Panel2
+        '
+        Me.scPriserButtons.Panel2.Controls.Add(Me.btnPrisLeggTil)
+        Me.scPriserButtons.Size = New System.Drawing.Size(244, 25)
+        Me.scPriserButtons.SplitterDistance = 122
+        Me.scPriserButtons.TabIndex = 0
+        Me.scPriserButtons.TabStop = False
+        '
+        'btnPriserFjern
+        '
+        Me.btnPriserFjern.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnPriserFjern.Location = New System.Drawing.Point(0, 0)
+        Me.btnPriserFjern.Name = "btnPriserFjern"
+        Me.btnPriserFjern.Size = New System.Drawing.Size(122, 25)
+        Me.btnPriserFjern.TabIndex = 0
+        Me.btnPriserFjern.Text = "&Fjern pris"
+        Me.btnPriserFjern.UseVisualStyleBackColor = True
+        '
+        'btnPrisLeggTil
+        '
+        Me.btnPrisLeggTil.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnPrisLeggTil.Location = New System.Drawing.Point(0, 0)
+        Me.btnPrisLeggTil.Name = "btnPrisLeggTil"
+        Me.btnPrisLeggTil.Size = New System.Drawing.Size(118, 25)
+        Me.btnPrisLeggTil.TabIndex = 0
+        Me.btnPrisLeggTil.Text = "L&egg til pris"
+        Me.btnPrisLeggTil.UseVisualStyleBackColor = True
+        '
         'lbPriser
         '
-        Me.lbPriser.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbPriser.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbPriser.FormattingEnabled = True
-        Me.lbPriser.Location = New System.Drawing.Point(3, 16)
+        Me.lbPriser.Location = New System.Drawing.Point(6, 17)
         Me.lbPriser.Name = "lbPriser"
-        Me.lbPriser.Size = New System.Drawing.Size(244, 89)
-        Me.lbPriser.TabIndex = 7
-        '
-        'btnLagre
-        '
-        Me.btnLagre.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnLagre.Location = New System.Drawing.Point(193, 235)
-        Me.btnLagre.Name = "btnLagre"
-        Me.btnLagre.Size = New System.Drawing.Size(75, 23)
-        Me.btnLagre.TabIndex = 9
-        Me.btnLagre.Text = "Lagre"
-        Me.btnLagre.UseVisualStyleBackColor = True
+        Me.lbPriser.Size = New System.Drawing.Size(238, 108)
+        Me.lbPriser.TabIndex = 10
         '
         'btnAvbryt
         '
         Me.btnAvbryt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAvbryt.Location = New System.Drawing.Point(15, 235)
+        Me.btnAvbryt.Image = Global.Program.My.Resources.Resources.cancel
+        Me.btnAvbryt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAvbryt.Location = New System.Drawing.Point(13, 284)
         Me.btnAvbryt.Name = "btnAvbryt"
-        Me.btnAvbryt.Size = New System.Drawing.Size(75, 23)
+        Me.btnAvbryt.Size = New System.Drawing.Size(61, 23)
         Me.btnAvbryt.TabIndex = 8
-        Me.btnAvbryt.Text = "Avbryt"
+        Me.btnAvbryt.Text = "&Avbryt"
+        Me.btnAvbryt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAvbryt.UseVisualStyleBackColor = True
+        '
+        'btnLagre
+        '
+        Me.btnLagre.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnLagre.Image = Global.Program.My.Resources.Resources.confirm
+        Me.btnLagre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLagre.Location = New System.Drawing.Point(213, 284)
+        Me.btnLagre.Name = "btnLagre"
+        Me.btnLagre.Size = New System.Drawing.Size(59, 23)
+        Me.btnLagre.TabIndex = 9
+        Me.btnLagre.Text = "&Lagre"
+        Me.btnLagre.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnLagre.UseVisualStyleBackColor = True
         '
         'frmProduktRegistrering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 267)
+        Me.ClientSize = New System.Drawing.Size(284, 316)
         Me.Controls.Add(Me.btnAvbryt)
         Me.Controls.Add(Me.btnLagre)
         Me.Controls.Add(Me.gbPriser)
@@ -161,6 +215,10 @@ Partial Class frmProduktRegistrering
         Me.Name = "frmProduktRegistrering"
         Me.Text = "Produktregistrering"
         Me.gbPriser.ResumeLayout(False)
+        Me.scPriserButtons.Panel1.ResumeLayout(False)
+        Me.scPriserButtons.Panel2.ResumeLayout(False)
+        CType(Me.scPriserButtons, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.scPriserButtons.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -172,7 +230,10 @@ Partial Class frmProduktRegistrering
     Friend WithEvents txtBeskrivelse As System.Windows.Forms.TextBox
     Friend WithEvents cbProduktgruppe As System.Windows.Forms.ComboBox
     Friend WithEvents gbPriser As System.Windows.Forms.GroupBox
-    Friend WithEvents lbPriser As System.Windows.Forms.ListBox
     Friend WithEvents btnLagre As System.Windows.Forms.Button
     Friend WithEvents btnAvbryt As System.Windows.Forms.Button
+    Friend WithEvents scPriserButtons As System.Windows.Forms.SplitContainer
+    Friend WithEvents btnPriserFjern As System.Windows.Forms.Button
+    Friend WithEvents btnPrisLeggTil As System.Windows.Forms.Button
+    Friend WithEvents lbPriser As System.Windows.Forms.ListBox
 End Class
