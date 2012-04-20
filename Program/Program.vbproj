@@ -6,11 +6,11 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1B2CAE63-028E-4554-B2AE-8A6C55414DFE}</ProjectGuid>
+    <ProjectGuid>{BE351FC0-F18D-4669-B493-008BD448A285}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>prosjekt.My.MyApplication</StartupObject>
-    <RootNamespace>prosjekt</RootNamespace>
-    <AssemblyName>prosjekt</AssemblyName>
+    <StartupObject>Program.My.MyApplication</StartupObject>
+    <RootNamespace>Program</RootNamespace>
+    <AssemblyName>Program</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -23,7 +23,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>prosjekt.xml</DocumentationFile>
+    <DocumentationFile>Program.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -33,7 +33,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>prosjekt.xml</DocumentationFile>
+    <DocumentationFile>Program.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -72,11 +72,70 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="gui\frmBrukerbehandling.Designer.vb">
+      <DependentUpon>frmBrukerbehandling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmBrukerbehandling.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="gui\frmEndreBruker.Designer.vb">
+      <DependentUpon>frmEndreBruker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmEndreBruker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmEndrePakke.Designer.vb">
+      <DependentUpon>frmEndrePakke.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmEndrePakke.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmEndreProdukt.Designer.vb">
+      <DependentUpon>frmEndreProdukt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmEndreProdukt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmEndreUtleie.Designer.vb">
+      <DependentUpon>frmEndreUtleie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmEndreUtleie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmHoved.Designer.vb">
+      <DependentUpon>frmHoved.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmHoved.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmPakkeregistrering.Designer.vb">
+      <DependentUpon>frmPakkeregistrering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmPakkeregistrering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmProduktregistrering.Designer.vb">
+      <DependentUpon>frmProduktregistrering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmProduktregistrering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmStatistikk.Designer.vb">
+      <DependentUpon>frmStatistikk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmStatistikk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmUtleieregistrering.Designer.vb">
+      <DependentUpon>frmUtleieregistrering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmUtleieregistrering.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -96,8 +155,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="gui\frmBrukerbehandling.resx">
+      <DependentUpon>frmBrukerbehandling.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmEndreBruker.resx">
+      <DependentUpon>frmEndreBruker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmEndreProdukt.resx">
+      <DependentUpon>frmEndreProdukt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmHoved.resx">
+      <DependentUpon>frmHoved.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmProduktregistrering.resx">
+      <DependentUpon>frmProduktregistrering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmUtleieregistrering.resx">
+      <DependentUpon>frmUtleieregistrering.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -116,6 +193,12 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\confirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
