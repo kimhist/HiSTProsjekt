@@ -73,6 +73,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDatabasetest.Designer.vb">
+      <DependentUpon>frmDatabasetest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatabasetest.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="gui\frmBrukerbehandling.Designer.vb">
       <DependentUpon>frmBrukerbehandling.vb</DependentUpon>
     </Compile>
@@ -157,6 +163,9 @@
     <Compile Include="Sql.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmDatabasetest.resx">
+      <DependentUpon>frmDatabasetest.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="gui\frmBrukerbehandling.resx">
       <DependentUpon>frmBrukerbehandling.vb</DependentUpon>
     </EmbeddedResource>
