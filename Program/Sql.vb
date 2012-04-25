@@ -18,10 +18,11 @@ Public Class Sql
         con = New MySqlConnection("Server=" & server & ";Database=" & database & ";User Id=" & username & ";Password=" & password + ";")
     End Sub
 
-    'Sjekker tilkoblingen til databasen
-    Public Function kobleTil() As Boolean
+    'Sjekker tilkoblingen til databasen >>>> kun for å test om oppkoblingen gikk bra
+    Public Function kobleTilOK() As Boolean
         Try
             con.Open()
+            con.Close()
             Return True
         Catch ex As MySqlException
             con.Dispose()
@@ -29,7 +30,7 @@ Public Class Sql
         End Try
     End Function
 
-    'Kobler fra databasen
+    'Kobler fra databasen >>> denne trenger vi ikke ettersom "Function Query" kobler opp, spør og kobler ned
     Public Sub kobleFra()
         Try
             con.Close()
@@ -39,7 +40,7 @@ Public Class Sql
         End Try
     End Sub
 
-    'Funksjonen foretar en spørring
+    'Funksjonen foretar en spørring. Kobler opp og ned fra databasen
     Public Function Query(ByVal sql As String) As DataTable
         Dim myData As New DataTable
 
