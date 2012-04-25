@@ -24,6 +24,8 @@ Partial Class frmDatabasetest
     Private Sub InitializeComponent()
         Me.lblHeader = New System.Windows.Forms.Label()
         Me.btnTest = New System.Windows.Forms.Button()
+        Me.btnSQL = New System.Windows.Forms.Button()
+        Me.lstUtskrift = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
         'lblHeader
@@ -38,18 +40,37 @@ Partial Class frmDatabasetest
         '
         'btnTest
         '
-        Me.btnTest.Location = New System.Drawing.Point(49, 130)
+        Me.btnTest.Location = New System.Drawing.Point(49, 91)
         Me.btnTest.Name = "btnTest"
-        Me.btnTest.Size = New System.Drawing.Size(162, 53)
+        Me.btnTest.Size = New System.Drawing.Size(162, 26)
         Me.btnTest.TabIndex = 1
         Me.btnTest.Text = "Test oppkobling"
         Me.btnTest.UseVisualStyleBackColor = True
+        '
+        'btnSQL
+        '
+        Me.btnSQL.Location = New System.Drawing.Point(49, 140)
+        Me.btnSQL.Name = "btnSQL"
+        Me.btnSQL.Size = New System.Drawing.Size(161, 25)
+        Me.btnSQL.TabIndex = 2
+        Me.btnSQL.Text = "SQL TEST"
+        Me.btnSQL.UseVisualStyleBackColor = True
+        '
+        'lstUtskrift
+        '
+        Me.lstUtskrift.FormattingEnabled = True
+        Me.lstUtskrift.Location = New System.Drawing.Point(16, 191)
+        Me.lstUtskrift.Name = "lstUtskrift"
+        Me.lstUtskrift.Size = New System.Drawing.Size(265, 95)
+        Me.lstUtskrift.TabIndex = 3
         '
         'frmDatabasetest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.ClientSize = New System.Drawing.Size(292, 316)
+        Me.Controls.Add(Me.lstUtskrift)
+        Me.Controls.Add(Me.btnSQL)
         Me.Controls.Add(Me.btnTest)
         Me.Controls.Add(Me.lblHeader)
         Me.Name = "frmDatabasetest"
@@ -60,4 +81,6 @@ Partial Class frmDatabasetest
     End Sub
     Friend WithEvents lblHeader As System.Windows.Forms.Label
     Friend WithEvents btnTest As System.Windows.Forms.Button
+    Friend WithEvents btnSQL As System.Windows.Forms.Button
+    Friend WithEvents lstUtskrift As System.Windows.Forms.ListBox
 End Class

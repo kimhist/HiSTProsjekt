@@ -40,7 +40,7 @@ Public Class Sql
     End Sub
 
     'Funksjonen foretar en spørring
-    Private Function Query(ByVal sql As String) As DataTable
+    Public Function Query(ByVal sql As String) As DataTable
         Dim myData As New DataTable
 
         Try
