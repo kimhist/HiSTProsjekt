@@ -31,11 +31,8 @@
                 postnr = tempRad("postnr")
                 lstUtskrift.Items.Add(pid & " " & fornavn & " " & etternavn)
             Next tempRad
-
         Else
             MsgBox("Oppkoblingen var ikke vellykket, prøv igjen senere.....")
         End If
-        oppkobling.kobleFra()
-
     End Sub
 End Class
