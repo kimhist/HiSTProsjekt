@@ -188,6 +188,7 @@ Partial Class frmEndreProdukt
         Me.Controls.Add(Me.gbSokId)
         Me.Controls.Add(Me.gbSokNavn)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "frmEndreProdukt"
         Me.Text = "Endre produkt"
         Me.gbSokNavn.ResumeLayout(False)

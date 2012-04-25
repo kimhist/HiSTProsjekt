@@ -22,22 +22,22 @@ Partial Class frmEndreBruker
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnNeste = New System.Windows.Forms.Button()
+        Me.btnEndre = New System.Windows.Forms.Button()
         Me.lblNavn = New System.Windows.Forms.Label()
         Me.cbNavn = New System.Windows.Forms.ComboBox()
         Me.lblBrukernavn = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
-        'btnNeste
+        'btnEndre
         '
-        Me.btnNeste.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnNeste.Location = New System.Drawing.Point(203, 67)
-        Me.btnNeste.Name = "btnNeste"
-        Me.btnNeste.Size = New System.Drawing.Size(75, 23)
-        Me.btnNeste.TabIndex = 4
-        Me.btnNeste.Text = "N&este"
-        Me.btnNeste.UseVisualStyleBackColor = True
+        Me.btnEndre.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnEndre.Location = New System.Drawing.Point(203, 67)
+        Me.btnEndre.Name = "btnEndre"
+        Me.btnEndre.Size = New System.Drawing.Size(75, 23)
+        Me.btnEndre.TabIndex = 4
+        Me.btnEndre.Text = "&Endre"
+        Me.btnEndre.UseVisualStyleBackColor = True
         '
         'lblNavn
         '
@@ -94,15 +94,16 @@ Partial Class frmEndreBruker
         Me.Controls.Add(Me.lblBrukernavn)
         Me.Controls.Add(Me.cbNavn)
         Me.Controls.Add(Me.lblNavn)
-        Me.Controls.Add(Me.btnNeste)
+        Me.Controls.Add(Me.btnEndre)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "frmEndreBruker"
         Me.Text = "Endre bruker"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnNeste As System.Windows.Forms.Button
+    Friend WithEvents btnEndre As System.Windows.Forms.Button
     Friend WithEvents lblNavn As System.Windows.Forms.Label
     Friend WithEvents cbNavn As System.Windows.Forms.ComboBox
     Friend WithEvents lblBrukernavn As System.Windows.Forms.Label

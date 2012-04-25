@@ -49,6 +49,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -72,6 +76,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDatabasetest.Designer.vb">
+      <DependentUpon>frmDatabasetest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatabasetest.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="gui\frmBrukerbehandling.Designer.vb">
       <DependentUpon>frmBrukerbehandling.vb</DependentUpon>
     </Compile>
@@ -82,6 +92,12 @@
       <DependentUpon>frmEndreBruker.vb</DependentUpon>
     </Compile>
     <Compile Include="gui\frmEndreBruker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmEndreKunde.Designer.vb">
+      <DependentUpon>frmEndreKunde.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmEndreKunde.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="gui\frmEndrePakke.Designer.vb">
@@ -106,6 +122,12 @@
       <DependentUpon>frmHoved.vb</DependentUpon>
     </Compile>
     <Compile Include="gui\frmHoved.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\frmKunderegistrering.Designer.vb">
+      <DependentUpon>frmKunderegistrering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmKunderegistrering.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="gui\frmLogin.Designer.vb">
@@ -153,22 +175,41 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Sql.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmDatabasetest.resx">
+      <DependentUpon>frmDatabasetest.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="gui\frmBrukerbehandling.resx">
       <DependentUpon>frmBrukerbehandling.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gui\frmEndreBruker.resx">
       <DependentUpon>frmEndreBruker.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmEndreKunde.resx">
+      <DependentUpon>frmEndreKunde.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmEndrePakke.resx">
+      <DependentUpon>frmEndrePakke.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="gui\frmEndreProdukt.resx">
       <DependentUpon>frmEndreProdukt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmEndreUtleie.resx">
+      <DependentUpon>frmEndreUtleie.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gui\frmHoved.resx">
       <DependentUpon>frmHoved.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmKunderegistrering.resx">
+      <DependentUpon>frmKunderegistrering.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="gui\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmPakkeregistrering.resx">
+      <DependentUpon>frmPakkeregistrering.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gui\frmProduktregistrering.resx">
       <DependentUpon>frmProduktregistrering.vb</DependentUpon>
@@ -202,6 +243,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ico\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\MySql.Data.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
