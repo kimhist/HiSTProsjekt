@@ -173,6 +173,9 @@
     <EmbeddedResource Include="gui\frmProduktregistrering.resx">
       <DependentUpon>frmProduktregistrering.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmStatistikk.resx">
+      <DependentUpon>frmStatistikk.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="gui\frmUtleieregistrering.resx">
       <DependentUpon>frmUtleieregistrering.vb</DependentUpon>
     </EmbeddedResource>
