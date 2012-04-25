@@ -33,11 +33,11 @@ Partial Class frmBrukerbehandling
         Me.txtFodt = New System.Windows.Forms.TextBox()
         Me.lblStilling = New System.Windows.Forms.Label()
         Me.cbStilling = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtFodt = New System.Windows.Forms.DateTimePicker()
         Me.lblBrukernavn = New System.Windows.Forms.Label()
         Me.lblPassord = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtBrukernavn = New System.Windows.Forms.TextBox()
+        Me.txtPassord = New System.Windows.Forms.TextBox()
         Me.btnLagre = New System.Windows.Forms.Button()
         Me.btnAvbryt = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -76,7 +76,7 @@ Partial Class frmBrukerbehandling
         Me.lblAdresse.Name = "lblAdresse"
         Me.lblAdresse.Size = New System.Drawing.Size(45, 13)
         Me.lblAdresse.TabIndex = 5
-        Me.lblAdresse.Text = "&Adresse"
+        Me.lblAdresse.Text = "A&dresse"
         '
         'lblTelefonnr
         '
@@ -167,15 +167,15 @@ Partial Class frmBrukerbehandling
         Me.cbStilling.Size = New System.Drawing.Size(170, 21)
         Me.cbStilling.TabIndex = 12
         '
-        'DateTimePicker1
+        'dtFodt
         '
-        Me.DateTimePicker1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.dtFodt.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DateTimePicker1.Location = New System.Drawing.Point(124, 118)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(170, 20)
-        Me.DateTimePicker1.TabIndex = 10
+        Me.dtFodt.Location = New System.Drawing.Point(124, 118)
+        Me.dtFodt.Name = "dtFodt"
+        Me.dtFodt.Size = New System.Drawing.Size(170, 20)
+        Me.dtFodt.TabIndex = 10
         '
         'lblBrukernavn
         '
@@ -201,25 +201,25 @@ Partial Class frmBrukerbehandling
         Me.lblPassord.TabIndex = 15
         Me.lblPassord.Text = "&Passord"
         '
-        'TextBox1
+        'txtBrukernavn
         '
-        Me.TextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.txtBrukernavn.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Location = New System.Drawing.Point(124, 218)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(170, 20)
-        Me.TextBox1.TabIndex = 14
+        Me.txtBrukernavn.Location = New System.Drawing.Point(124, 218)
+        Me.txtBrukernavn.Name = "txtBrukernavn"
+        Me.txtBrukernavn.Size = New System.Drawing.Size(170, 20)
+        Me.txtBrukernavn.TabIndex = 14
         '
-        'TextBox2
+        'txtPassord
         '
-        Me.TextBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.txtPassord.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Location = New System.Drawing.Point(124, 244)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(170, 20)
-        Me.TextBox2.TabIndex = 16
+        Me.txtPassord.Location = New System.Drawing.Point(124, 244)
+        Me.txtPassord.Name = "txtPassord"
+        Me.txtPassord.Size = New System.Drawing.Size(170, 20)
+        Me.txtPassord.TabIndex = 16
         '
         'btnLagre
         '
@@ -243,7 +243,7 @@ Partial Class frmBrukerbehandling
         Me.btnAvbryt.Name = "btnAvbryt"
         Me.btnAvbryt.Size = New System.Drawing.Size(59, 23)
         Me.btnAvbryt.TabIndex = 18
-        Me.btnAvbryt.Text = "A&vbryt"
+        Me.btnAvbryt.Text = "&Avbryt"
         Me.btnAvbryt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAvbryt.UseVisualStyleBackColor = True
         '
@@ -254,11 +254,11 @@ Partial Class frmBrukerbehandling
         Me.ClientSize = New System.Drawing.Size(311, 312)
         Me.Controls.Add(Me.btnAvbryt)
         Me.Controls.Add(Me.btnLagre)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtPassord)
+        Me.Controls.Add(Me.txtBrukernavn)
         Me.Controls.Add(Me.lblPassord)
         Me.Controls.Add(Me.lblBrukernavn)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.dtFodt)
         Me.Controls.Add(Me.cbStilling)
         Me.Controls.Add(Me.lblStilling)
         Me.Controls.Add(Me.txtFodt)
@@ -287,11 +287,11 @@ Partial Class frmBrukerbehandling
     Friend WithEvents txtFodt As System.Windows.Forms.TextBox
     Friend WithEvents lblStilling As System.Windows.Forms.Label
     Friend WithEvents cbStilling As System.Windows.Forms.ComboBox
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtFodt As System.Windows.Forms.DateTimePicker
     Friend WithEvents lblBrukernavn As System.Windows.Forms.Label
     Friend WithEvents lblPassord As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtBrukernavn As System.Windows.Forms.TextBox
+    Friend WithEvents txtPassord As System.Windows.Forms.TextBox
     Friend WithEvents btnLagre As System.Windows.Forms.Button
     Friend WithEvents btnAvbryt As System.Windows.Forms.Button
 End Class

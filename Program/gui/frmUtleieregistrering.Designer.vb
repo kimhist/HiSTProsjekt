@@ -46,6 +46,8 @@ Partial Class frmUtleieregistrering
         Me.scProduktButtons = New System.Windows.Forms.SplitContainer()
         Me.btnProduktFjern = New System.Windows.Forms.Button()
         Me.btnProduktLeggTil = New System.Windows.Forms.Button()
+        Me.btnLagre = New System.Windows.Forms.Button()
+        Me.btnAvbryt = New System.Windows.Forms.Button()
         CType(Me.scMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.scMain.Panel1.SuspendLayout()
         Me.scMain.Panel2.SuspendLayout()
@@ -71,6 +73,7 @@ Partial Class frmUtleieregistrering
         '
         'scMain.Panel1
         '
+        Me.scMain.Panel1.Controls.Add(Me.btnAvbryt)
         Me.scMain.Panel1.Controls.Add(Me.gbKunde)
         Me.scMain.Panel1.Controls.Add(Me.dtpTil)
         Me.scMain.Panel1.Controls.Add(Me.dtpFra)
@@ -80,9 +83,10 @@ Partial Class frmUtleieregistrering
         '
         'scMain.Panel2
         '
+        Me.scMain.Panel2.Controls.Add(Me.btnLagre)
         Me.scMain.Panel2.Controls.Add(Me.gbProdukt)
         Me.scMain.Panel2MinSize = 300
-        Me.scMain.Size = New System.Drawing.Size(660, 560)
+        Me.scMain.Size = New System.Drawing.Size(660, 364)
         Me.scMain.SplitterDistance = 327
         Me.scMain.TabIndex = 0
         Me.scMain.TabStop = False
@@ -134,7 +138,7 @@ Partial Class frmUtleieregistrering
         Me.scKundeButtons.Panel2.Controls.Add(Me.btnKundeOpprett)
         Me.scKundeButtons.Size = New System.Drawing.Size(296, 27)
         Me.scKundeButtons.SplitterDistance = 147
-        Me.scKundeButtons.TabIndex = 0
+        Me.scKundeButtons.TabIndex = 14
         Me.scKundeButtons.TabStop = False
         '
         'btnKundeEndre
@@ -320,7 +324,7 @@ Partial Class frmUtleieregistrering
         Me.lbProdukt.FormattingEnabled = True
         Me.lbProdukt.Location = New System.Drawing.Point(6, 19)
         Me.lbProdukt.Name = "lbProdukt"
-        Me.lbProdukt.Size = New System.Drawing.Size(292, 238)
+        Me.lbProdukt.Size = New System.Drawing.Size(292, 225)
         Me.lbProdukt.TabIndex = 16
         '
         'scProduktButtons
@@ -361,11 +365,37 @@ Partial Class frmUtleieregistrering
         Me.btnProduktLeggTil.Text = "&Legg til"
         Me.btnProduktLeggTil.UseVisualStyleBackColor = True
         '
+        'btnLagre
+        '
+        Me.btnLagre.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnLagre.Image = Global.Program.My.Resources.Resources.confirm
+        Me.btnLagre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLagre.Location = New System.Drawing.Point(258, 328)
+        Me.btnLagre.Name = "btnLagre"
+        Me.btnLagre.Size = New System.Drawing.Size(58, 23)
+        Me.btnLagre.TabIndex = 20
+        Me.btnLagre.Text = "&Lagre"
+        Me.btnLagre.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnLagre.UseVisualStyleBackColor = True
+        '
+        'btnAvbryt
+        '
+        Me.btnAvbryt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnAvbryt.Image = Global.Program.My.Resources.Resources.cancel
+        Me.btnAvbryt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAvbryt.Location = New System.Drawing.Point(12, 328)
+        Me.btnAvbryt.Name = "btnAvbryt"
+        Me.btnAvbryt.Size = New System.Drawing.Size(59, 23)
+        Me.btnAvbryt.TabIndex = 19
+        Me.btnAvbryt.Text = "A&vbryt"
+        Me.btnAvbryt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAvbryt.UseVisualStyleBackColor = True
+        '
         'frmUtleieregistrering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(660, 560)
+        Me.ClientSize = New System.Drawing.Size(660, 364)
         Me.Controls.Add(Me.scMain)
         Me.Name = "frmUtleieregistrering"
         Me.Text = "Utleieregistrering"
@@ -412,4 +442,6 @@ Partial Class frmUtleieregistrering
     Friend WithEvents scProduktButtons As System.Windows.Forms.SplitContainer
     Friend WithEvents btnProduktFjern As System.Windows.Forms.Button
     Friend WithEvents btnProduktLeggTil As System.Windows.Forms.Button
+    Friend WithEvents btnLagre As System.Windows.Forms.Button
+    Friend WithEvents btnAvbryt As System.Windows.Forms.Button
 End Class
