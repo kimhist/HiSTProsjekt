@@ -20,14 +20,17 @@ Public Class Sql
 
     'Sjekker tilkoblingen til databasen >>>> kun for å test om oppkoblingen gikk bra
     Public Function kobleTilOK() As Boolean
+        Dim tilkobling As Boolean = False
         Try
             con.Open()
+            tilkobling = True
             con.Close()
             Return True
         Catch ex As MySqlException
-            con.Dispose()
-            Return False
+            tilkobling = False
         End Try
+        con.Dispose()
+        Return tilkobling
     End Function
 
     'Kobler fra databasen >>> denne trenger vi ikke ettersom "Function Query" kobler opp, spør og kobler ned
@@ -40,7 +43,7 @@ Public Class Sql
         End Try
     End Sub
 
-    'Funksjonen foretar en spørring. Kobler opp og ned fra databasen
+    'Funksjonen foretar en oppkobling mot databasen, utfører en spørring og ned fra databasen.
     Public Function Query(ByVal sql As String) As DataTable
         Dim myData As New DataTable
 
