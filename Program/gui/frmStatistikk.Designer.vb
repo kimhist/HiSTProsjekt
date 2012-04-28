@@ -22,83 +22,123 @@ Partial Class frmStatistikk
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Me.rdbUke = New System.Windows.Forms.RadioButton()
+        Me.rdbMaaned = New System.Windows.Forms.RadioButton()
+        Me.rdbAar = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cbValg = New System.Windows.Forms.ComboBox()
+        Me.lblVelgStatisikk = New System.Windows.Forms.Label()
+        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'RadioButton1
+        'rdbUke
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(13, 34)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(45, 17)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Uke"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.rdbUke.AutoSize = True
+        Me.rdbUke.Location = New System.Drawing.Point(343, 296)
+        Me.rdbUke.Name = "rdbUke"
+        Me.rdbUke.Size = New System.Drawing.Size(45, 17)
+        Me.rdbUke.TabIndex = 0
+        Me.rdbUke.TabStop = True
+        Me.rdbUke.Text = "Uke"
+        Me.rdbUke.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'rdbMaaned
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(13, 66)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(58, 17)
-        Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Måned"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.rdbMaaned.AutoCheck = False
+        Me.rdbMaaned.AutoSize = True
+        Me.rdbMaaned.Location = New System.Drawing.Point(402, 296)
+        Me.rdbMaaned.Name = "rdbMaaned"
+        Me.rdbMaaned.Size = New System.Drawing.Size(58, 17)
+        Me.rdbMaaned.TabIndex = 1
+        Me.rdbMaaned.TabStop = True
+        Me.rdbMaaned.Text = "Måned"
+        Me.rdbMaaned.UseVisualStyleBackColor = True
         '
-        'RadioButton3
+        'rdbAar
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(13, 98)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(35, 17)
-        Me.RadioButton3.TabIndex = 2
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "År"
-        Me.RadioButton3.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(13, 144)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Vis Statistikk"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.rdbAar.AutoCheck = False
+        Me.rdbAar.AutoSize = True
+        Me.rdbAar.Location = New System.Drawing.Point(476, 296)
+        Me.rdbAar.Name = "rdbAar"
+        Me.rdbAar.Size = New System.Drawing.Size(35, 17)
+        Me.rdbAar.TabIndex = 2
+        Me.rdbAar.TabStop = True
+        Me.rdbAar.Text = "År"
+        Me.rdbAar.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
-        Me.GroupBox1.Location = New System.Drawing.Point(163, 28)
+        Me.GroupBox1.Controls.Add(Me.Chart1)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(389, 263)
+        Me.GroupBox1.Size = New System.Drawing.Size(553, 272)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Statistikk"
+        '
+        'cbValg
+        '
+        Me.cbValg.FormattingEnabled = True
+        Me.cbValg.Items.AddRange(New Object() {"Utleie", "Avanse"})
+        Me.cbValg.Location = New System.Drawing.Point(128, 290)
+        Me.cbValg.Name = "cbValg"
+        Me.cbValg.Size = New System.Drawing.Size(121, 21)
+        Me.cbValg.TabIndex = 5
+        '
+        'lblVelgStatisikk
+        '
+        Me.lblVelgStatisikk.AutoSize = True
+        Me.lblVelgStatisikk.Location = New System.Drawing.Point(50, 296)
+        Me.lblVelgStatisikk.Name = "lblVelgStatisikk"
+        Me.lblVelgStatisikk.Size = New System.Drawing.Size(72, 13)
+        Me.lblVelgStatisikk.TabIndex = 6
+        Me.lblVelgStatisikk.Text = "Velg statistikk"
+        '
+        'Chart1
+        '
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
+        Me.Chart1.Location = New System.Drawing.Point(6, 10)
+        Me.Chart1.Name = "Chart1"
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.Chart1.Series.Add(Series1)
+        Me.Chart1.Size = New System.Drawing.Size(541, 256)
+        Me.Chart1.TabIndex = 0
+        Me.Chart1.Text = "Chart1"
         '
         'frmStatistikk
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(577, 323)
+        Me.Controls.Add(Me.lblVelgStatisikk)
+        Me.Controls.Add(Me.cbValg)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.RadioButton3)
-        Me.Controls.Add(Me.RadioButton2)
-        Me.Controls.Add(Me.RadioButton1)
+        Me.Controls.Add(Me.rdbAar)
+        Me.Controls.Add(Me.rdbMaaned)
+        Me.Controls.Add(Me.rdbUke)
         Me.Name = "frmStatistikk"
         Me.Text = "Statistikk"
+        Me.GroupBox1.ResumeLayout(False)
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents rdbUke As System.Windows.Forms.RadioButton
+    Friend WithEvents rdbMaaned As System.Windows.Forms.RadioButton
+    Friend WithEvents rdbAar As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents cbValg As System.Windows.Forms.ComboBox
+    Friend WithEvents lblVelgStatisikk As System.Windows.Forms.Label
+    Friend WithEvents Chart1 As System.Windows.Forms.DataVisualization.Charting.Chart
 End Class
