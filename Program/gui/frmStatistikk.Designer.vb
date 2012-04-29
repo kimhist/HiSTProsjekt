@@ -29,9 +29,9 @@ Partial Class frmStatistikk
         Me.rdbMaaned = New System.Windows.Forms.RadioButton()
         Me.rdbAar = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.cbValg = New System.Windows.Forms.ComboBox()
         Me.lblVelgStatisikk = New System.Windows.Forms.Label()
-        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.GroupBox1.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -81,6 +81,23 @@ Partial Class frmStatistikk
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Statistikk"
         '
+        'Chart1
+        '
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Me.Chart1.Dock = System.Windows.Forms.DockStyle.Fill
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
+        Me.Chart1.Location = New System.Drawing.Point(3, 16)
+        Me.Chart1.Name = "Chart1"
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.Chart1.Series.Add(Series1)
+        Me.Chart1.Size = New System.Drawing.Size(547, 253)
+        Me.Chart1.TabIndex = 0
+        Me.Chart1.Text = "Chart1"
+        '
         'cbValg
         '
         Me.cbValg.FormattingEnabled = True
@@ -98,22 +115,6 @@ Partial Class frmStatistikk
         Me.lblVelgStatisikk.Size = New System.Drawing.Size(72, 13)
         Me.lblVelgStatisikk.TabIndex = 6
         Me.lblVelgStatisikk.Text = "Velg statistikk"
-        '
-        'Chart1
-        '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(6, 10)
-        Me.Chart1.Name = "Chart1"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(541, 256)
-        Me.Chart1.TabIndex = 0
-        Me.Chart1.Text = "Chart1"
         '
         'frmStatistikk
         '
