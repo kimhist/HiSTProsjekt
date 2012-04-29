@@ -26,7 +26,7 @@ Partial Class frmEndreBruker
         Me.lblNavn = New System.Windows.Forms.Label()
         Me.cbNavn = New System.Windows.Forms.ComboBox()
         Me.lblBrukernavn = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtBrukernavn = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'btnEndre
@@ -56,6 +56,8 @@ Partial Class frmEndreBruker
         Me.cbNavn.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cbNavn.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cbNavn.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cbNavn.FormattingEnabled = True
         Me.cbNavn.Location = New System.Drawing.Point(102, 12)
         Me.cbNavn.Name = "cbNavn"
@@ -74,23 +76,23 @@ Partial Class frmEndreBruker
         Me.lblBrukernavn.TabIndex = 2
         Me.lblBrukernavn.Text = "Brukernavn"
         '
-        'TextBox1
+        'txtBrukernavn
         '
-        Me.TextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.txtBrukernavn.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(102, 39)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(176, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.txtBrukernavn.Enabled = False
+        Me.txtBrukernavn.Location = New System.Drawing.Point(102, 39)
+        Me.txtBrukernavn.Name = "txtBrukernavn"
+        Me.txtBrukernavn.Size = New System.Drawing.Size(176, 20)
+        Me.txtBrukernavn.TabIndex = 3
         '
         'frmEndreBruker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(290, 102)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtBrukernavn)
         Me.Controls.Add(Me.lblBrukernavn)
         Me.Controls.Add(Me.cbNavn)
         Me.Controls.Add(Me.lblNavn)
@@ -107,5 +109,5 @@ Partial Class frmEndreBruker
     Friend WithEvents lblNavn As System.Windows.Forms.Label
     Friend WithEvents cbNavn As System.Windows.Forms.ComboBox
     Friend WithEvents lblBrukernavn As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtBrukernavn As System.Windows.Forms.TextBox
 End Class
