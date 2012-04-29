@@ -75,7 +75,6 @@ Partial Class frmLogin
         Me.txtBrukernavn.Name = "txtBrukernavn"
         Me.txtBrukernavn.Size = New System.Drawing.Size(153, 20)
         Me.txtBrukernavn.TabIndex = 1
-        Me.txtBrukernavn.Text = "test"
         '
         'txtPassord
         '
@@ -87,7 +86,6 @@ Partial Class frmLogin
         Me.txtPassord.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassord.Size = New System.Drawing.Size(153, 20)
         Me.txtPassord.TabIndex = 3
-        Me.txtPassord.Text = "passord"
         '
         'frmLogin
         '
