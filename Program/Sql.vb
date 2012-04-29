@@ -2,11 +2,20 @@
 Imports System.Data
 
 Public Class Sql
+    Public Class ConnectionException
+        Inherits Exception
+    End Class
+
     Private server As String
     Private database As String
     Private username As String
     Private password As String
     Private con As MySqlConnection
+
+    'Bruker default konfigurasjonen til tilkobling
+    Sub New()
+        Me.New("mysql.stud.aitel.hist.no", "ib-gr2", "ib-gr2", "M9w2rFye")
+    End Sub
 
     'Lager en konstuktør for en tilkobling
     Sub New(ByVal server As String, ByVal database As String, ByVal username As String, ByVal password As String)
@@ -18,22 +27,19 @@ Public Class Sql
         con = New MySqlConnection("Server=" & server & ";Database=" & database & ";User Id=" & username & ";Password=" & password + ";")
     End Sub
 
-    'Sjekker tilkoblingen til databasen >>>> kun for å test om oppkoblingen gikk bra
-    Public Function kobleTilOK() As Boolean
-        Dim tilkobling As Boolean = False
+    'Oppretter en tilkobling til databasen
+    Public Sub kobleTil()
         Try
             con.Open()
-            tilkobling = True
-            con.Close()
-            Return True
         Catch ex As MySqlException
-            tilkobling = False
+            Throw New ConnectionException
+        Finally
+            con.Close()
+            con.Dispose()
         End Try
-        con.Dispose()
-        Return tilkobling
-    End Function
+    End Sub
 
-    'Kobler fra databasen >>> denne trenger vi ikke ettersom "Function Query" kobler opp, spør og kobler ned
+    'Kobler fra databasen
     Public Sub kobleFra()
         Try
             con.Close()
@@ -43,12 +49,14 @@ Public Class Sql
         End Try
     End Sub
 
-    'Funksjonen foretar en oppkobling mot databasen, utfører en spørring og ned fra databasen.
+    'Utfører en spørring mot databasen
     Public Function Query(ByVal sql As String) As DataTable
         Dim myData As New DataTable
 
         Try
-            con.Open()
+            If Not (con.State = ConnectionState.Open) Then
+                kobleTil()
+            End If
 
             Dim myCommand As New MySqlCommand
             Dim myAdapter As New MySqlDataAdapter
@@ -58,10 +66,8 @@ Public Class Sql
 
             myAdapter.SelectCommand = myCommand
             myAdapter.Fill(myData)
-
-            con.Close()
-        Catch myerror As MySqlException
-            MessageBox.Show("Tilkobling til databasen har feilet " & myerror.Message)
+        Catch ex As MySqlException
+            MessageBox.Show("Tilkobling til databasen har feilet " & ex.Message)
         Finally
             con.Dispose()
         End Try

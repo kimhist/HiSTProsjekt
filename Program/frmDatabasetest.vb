@@ -2,20 +2,24 @@
 
 
     Private Sub btnTest_Click(sender As System.Object, e As System.EventArgs) Handles btnTest.Click
-        Dim oppkobling As New Sql("mysql.stud.aitel.hist.no", "ib-gr2", "ib-gr2", "M9w2rFye")
+        Dim oppkobling As New Sql
 
-        If oppkobling.kobleTilOK Then
+        Try
+            oppkobling.kobleTil()
             MsgBox("Oppkoblingen gikk veldig bra")
-        Else
+        Catch ex As Exception
             MsgBox("Oppkoblingen var ikke vellykket")
-        End If
+        Finally
+            oppkobling.kobleFra()
+        End Try
     End Sub
 
     Private Sub btnSQL_Click(sender As System.Object, e As System.EventArgs) Handles btnSQL.Click
-        Dim oppkobling As New Sql("mysql.stud.aitel.hist.no", "ib-gr2", "ib-gr2", "M9w2rFye")
+        Dim oppkobling As New Sql
 
-        'Sjekker om oppkobling er ok
-        If oppkobling.kobleTilOK Then
+        Try
+            oppkobling.kobleTil()
+
             Dim myData As New DataTable
             myData = oppkobling.Query("SELECT * FROM person")
             Dim tempRad As DataRow
@@ -31,8 +35,8 @@
                 postnr = tempRad("postnr")
                 lstUtskrift.Items.Add(pid & " " & fornavn & " " & etternavn)
             Next tempRad
-        Else
-            MsgBox("Oppkoblingen var ikke vellykket, prøv igjen senere.....")
-        End If
+        Catch ex As Exception
+            MsgBox("Oppkoblingen var ikke vellykket, prøv igjen senere")
+        End Try
     End Sub
 End Class

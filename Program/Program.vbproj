@@ -177,6 +177,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Sql.vb" />
+    <Compile Include="sys\Login.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmDatabasetest.resx">
