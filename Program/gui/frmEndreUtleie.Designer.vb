@@ -23,14 +23,14 @@ Partial Class frmEndreUtleie
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.lblId = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.lblFra = New System.Windows.Forms.Label()
         Me.lblTil = New System.Windows.Forms.Label()
         Me.lblKunde = New System.Windows.Forms.Label()
         Me.dtpTil = New System.Windows.Forms.DateTimePicker()
         Me.dtpFra = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtKunde = New System.Windows.Forms.TextBox()
         Me.btnEndre = New System.Windows.Forms.Button()
+        Me.cbProduktId = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'lblId
@@ -43,15 +43,6 @@ Partial Class frmEndreUtleie
         Me.lblId.Size = New System.Drawing.Size(16, 13)
         Me.lblId.TabIndex = 0
         Me.lblId.Text = "&Id"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Location = New System.Drawing.Point(59, 12)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(213, 20)
-        Me.TextBox1.TabIndex = 1
         '
         'lblFra
         '
@@ -110,15 +101,15 @@ Partial Class frmEndreUtleie
         Me.dtpFra.Size = New System.Drawing.Size(208, 20)
         Me.dtpFra.TabIndex = 5
         '
-        'TextBox2
+        'txtKunde
         '
-        Me.TextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.txtKunde.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(59, 108)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(208, 20)
-        Me.TextBox2.TabIndex = 7
+        Me.txtKunde.Enabled = False
+        Me.txtKunde.Location = New System.Drawing.Point(59, 108)
+        Me.txtKunde.Name = "txtKunde"
+        Me.txtKunde.Size = New System.Drawing.Size(208, 20)
+        Me.txtKunde.TabIndex = 7
         '
         'btnEndre
         '
@@ -130,19 +121,32 @@ Partial Class frmEndreUtleie
         Me.btnEndre.Text = "&Endre"
         Me.btnEndre.UseVisualStyleBackColor = True
         '
+        'cbProduktId
+        '
+        Me.cbProduktId.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cbProduktId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.cbProduktId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbProduktId.FormattingEnabled = True
+        Me.cbProduktId.Location = New System.Drawing.Point(59, 12)
+        Me.cbProduktId.Name = "cbProduktId"
+        Me.cbProduktId.Size = New System.Drawing.Size(208, 21)
+        Me.cbProduktId.TabIndex = 9
+        '
         'frmEndreUtleie
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 179)
+        Me.Controls.Add(Me.cbProduktId)
         Me.Controls.Add(Me.btnEndre)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtKunde)
         Me.Controls.Add(Me.dtpTil)
         Me.Controls.Add(Me.dtpFra)
         Me.Controls.Add(Me.lblKunde)
         Me.Controls.Add(Me.lblTil)
         Me.Controls.Add(Me.lblFra)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.lblId)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -153,12 +157,12 @@ Partial Class frmEndreUtleie
 
     End Sub
     Friend WithEvents lblId As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents lblFra As System.Windows.Forms.Label
     Friend WithEvents lblTil As System.Windows.Forms.Label
     Friend WithEvents lblKunde As System.Windows.Forms.Label
     Friend WithEvents dtpTil As System.Windows.Forms.DateTimePicker
     Friend WithEvents dtpFra As System.Windows.Forms.DateTimePicker
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtKunde As System.Windows.Forms.TextBox
     Friend WithEvents btnEndre As System.Windows.Forms.Button
+    Friend WithEvents cbProduktId As System.Windows.Forms.ComboBox
 End Class

@@ -89,6 +89,12 @@
     <Compile Include="gui\frmBrukerbehandling.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="gui\frmDialogProduktPris.Designer.vb">
+      <DependentUpon>frmDialogProduktPris.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gui\frmDialogProduktPris.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="gui\frmEndreBruker.Designer.vb">
       <DependentUpon>frmEndreBruker.vb</DependentUpon>
     </Compile>
@@ -178,7 +184,9 @@
     </Compile>
     <Compile Include="Sql.vb" />
     <Compile Include="sys\Bruker.vb" />
+    <Compile Include="sys\ComboBoxValue.vb" />
     <Compile Include="sys\Login.vb" />
+    <Compile Include="sys\Pris.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmDatabasetest.resx">
@@ -186,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="gui\frmBrukerbehandling.resx">
       <DependentUpon>frmBrukerbehandling.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\frmDialogProduktPris.resx">
+      <DependentUpon>frmDialogProduktPris.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gui\frmEndreBruker.resx">
       <DependentUpon>frmEndreBruker.vb</DependentUpon>

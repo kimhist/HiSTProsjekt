@@ -21,6 +21,9 @@
             Next
         Catch ex As Exception
             MessageBox.Show("Fikk ikke hentet inn eksisterende brukere", "Feilmelding", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.DialogResult = DialogResult.Abort
+        Finally
+            oppkobling.kobleFra()
         End Try
     End Sub
 
@@ -37,5 +40,9 @@
         Else
             MessageBox.Show("Velg bruker", "Feilmelding", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+    End Sub
+
+    Private Sub frmEndreBruker_FormClosed(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles MyBase.FormClosed
+        Me.Dispose()
     End Sub
 End Class

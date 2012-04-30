@@ -46,4 +46,9 @@
     Private Sub btnLagre_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLagre.Click
         Me.DialogResult = DialogResult.OK
     End Sub
+
+    Private Sub frmBrukerbehandling_FormClosed(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles MyBase.FormClosed
+        oppkobling.kobleFra()
+        Me.Dispose()
+    End Sub
 End Class

@@ -33,9 +33,6 @@ Public Class Sql
             con.Open()
         Catch ex As MySqlException
             Throw New ConnectionException
-        Finally
-            con.Close()
-            con.Dispose()
         End Try
     End Sub
 
@@ -48,6 +45,29 @@ Public Class Sql
 
         End Try
     End Sub
+
+    Public Function executeQuery(ByVal sql As String) As Integer
+        Try
+            If Not (con.State = ConnectionState.Open) Then
+                kobleTil()
+            End If
+
+            Dim myData As New DataTable
+            Dim myCommand As New MySqlCommand
+            Dim myAdapter As New MySqlDataAdapter
+            myCommand.Connection = con
+            myCommand.CommandText = sql & ";Select LAST_INSERT_ID();"
+
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(myData)
+
+            Return myData.Rows.Item(0)("LAST_INSERT_ID()")
+        Catch ex As MySqlException
+            MessageBox.Show("Tilkobling til databasen har feilet " & ex.Message)
+        End Try
+
+        Return 0
+    End Function
 
     'Utfører en spørring mot databasen
     Public Function Query(ByVal sql As String) As DataTable
@@ -68,8 +88,6 @@ Public Class Sql
             myAdapter.Fill(myData)
         Catch ex As MySqlException
             MessageBox.Show("Tilkobling til databasen har feilet " & ex.Message)
-        Finally
-            con.Dispose()
         End Try
 
         Return myData

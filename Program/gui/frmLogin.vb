@@ -35,4 +35,12 @@
         txtBrukernavn.Text = Me.DEFAULT_BRUKERNAVN
         txtPassord.Text = Me.DEFAULT_PASSORD
     End Sub
+
+    Private Sub frmLogin_VisibleChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.VisibleChanged
+        reset()
+    End Sub
+
+    Private Sub frmLogin_FormClosed(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles MyBase.FormClosed
+        Me.Dispose()
+    End Sub
 End Class

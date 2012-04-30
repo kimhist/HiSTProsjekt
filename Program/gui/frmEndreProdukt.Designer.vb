@@ -23,12 +23,14 @@ Partial Class frmEndreProdukt
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.gbSokNavn = New System.Windows.Forms.GroupBox()
+        Me.btnNavnSlett = New System.Windows.Forms.Button()
         Me.btnNavnEndre = New System.Windows.Forms.Button()
         Me.txtNavnProduktId = New System.Windows.Forms.TextBox()
         Me.lblNavnProduktId = New System.Windows.Forms.Label()
         Me.cbNavnProduktNavn = New System.Windows.Forms.ComboBox()
         Me.lblNavnProduktNavn = New System.Windows.Forms.Label()
         Me.gbSokId = New System.Windows.Forms.GroupBox()
+        Me.btnIdSlett = New System.Windows.Forms.Button()
         Me.btnIdEndre = New System.Windows.Forms.Button()
         Me.txtIdProduktNavn = New System.Windows.Forms.TextBox()
         Me.lblIdProduktNavn = New System.Windows.Forms.Label()
@@ -41,6 +43,7 @@ Partial Class frmEndreProdukt
         'gbSokNavn
         '
         Me.gbSokNavn.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gbSokNavn.Controls.Add(Me.btnNavnSlett)
         Me.gbSokNavn.Controls.Add(Me.btnNavnEndre)
         Me.gbSokNavn.Controls.Add(Me.txtNavnProduktId)
         Me.gbSokNavn.Controls.Add(Me.lblNavnProduktId)
@@ -52,6 +55,16 @@ Partial Class frmEndreProdukt
         Me.gbSokNavn.TabIndex = 0
         Me.gbSokNavn.TabStop = False
         Me.gbSokNavn.Text = "Produktsøk på navn"
+        '
+        'btnNavnSlett
+        '
+        Me.btnNavnSlett.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnNavnSlett.Location = New System.Drawing.Point(98, 73)
+        Me.btnNavnSlett.Name = "btnNavnSlett"
+        Me.btnNavnSlett.Size = New System.Drawing.Size(75, 23)
+        Me.btnNavnSlett.TabIndex = 6
+        Me.btnNavnSlett.Text = "&Slett"
+        Me.btnNavnSlett.UseVisualStyleBackColor = True
         '
         'btnNavnEndre
         '
@@ -91,6 +104,8 @@ Partial Class frmEndreProdukt
         Me.cbNavnProduktNavn.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cbNavnProduktNavn.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.cbNavnProduktNavn.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cbNavnProduktNavn.FormattingEnabled = True
         Me.cbNavnProduktNavn.Location = New System.Drawing.Point(96, 20)
         Me.cbNavnProduktNavn.Name = "cbNavnProduktNavn"
@@ -112,6 +127,7 @@ Partial Class frmEndreProdukt
         'gbSokId
         '
         Me.gbSokId.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gbSokId.Controls.Add(Me.btnIdSlett)
         Me.gbSokId.Controls.Add(Me.btnIdEndre)
         Me.gbSokId.Controls.Add(Me.txtIdProduktNavn)
         Me.gbSokId.Controls.Add(Me.lblIdProduktNavn)
@@ -123,6 +139,16 @@ Partial Class frmEndreProdukt
         Me.gbSokId.TabIndex = 6
         Me.gbSokId.TabStop = False
         Me.gbSokId.Text = "Produktsøk på id"
+        '
+        'btnIdSlett
+        '
+        Me.btnIdSlett.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnIdSlett.Location = New System.Drawing.Point(96, 70)
+        Me.btnIdSlett.Name = "btnIdSlett"
+        Me.btnIdSlett.Size = New System.Drawing.Size(75, 23)
+        Me.btnIdSlett.TabIndex = 12
+        Me.btnIdSlett.Text = "S&lett"
+        Me.btnIdSlett.UseVisualStyleBackColor = True
         '
         'btnIdEndre
         '
@@ -162,6 +188,8 @@ Partial Class frmEndreProdukt
         Me.cbIdProduktId.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cbIdProduktId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.cbIdProduktId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cbIdProduktId.FormattingEnabled = True
         Me.cbIdProduktId.Location = New System.Drawing.Point(96, 17)
         Me.cbIdProduktId.Name = "cbIdProduktId"
@@ -210,4 +238,6 @@ Partial Class frmEndreProdukt
     Friend WithEvents btnNavnEndre As System.Windows.Forms.Button
     Friend WithEvents txtNavnProduktId As System.Windows.Forms.TextBox
     Friend WithEvents lblNavnProduktId As System.Windows.Forms.Label
+    Friend WithEvents btnNavnSlett As System.Windows.Forms.Button
+    Friend WithEvents btnIdSlett As System.Windows.Forms.Button
 End Class

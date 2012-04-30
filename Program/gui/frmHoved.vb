@@ -1,4 +1,6 @@
-﻿Public Class frmHoved
+﻿Imports System.Reflection
+
+Public Class frmHoved
     Private caller As Form
     Private login As Login
 
@@ -40,7 +42,7 @@
         End Select
     End Sub
 
-    Private Sub createButton(ByVal tabIndex As Integer, ByVal text As String, ByVal form As Form)
+    Private Sub createButton(ByVal tabIndex As Integer, ByVal text As String, ByVal form As String)
         Dim btn As Button = New Button
         With btn
             .Text = text
@@ -53,53 +55,64 @@
         pnHoved.Controls.Add(btn)
     End Sub
 
-    Private Function openForm(ByRef form As Form) As Boolean
-        form.ShowDialog()
+    Private Function openForm(ByVal form As String) As Boolean
+        Dim f As Form = GetFormByName(form)
+        f.ShowDialog()
         Return True
     End Function
 
+    Private Function GetFormByName(ByVal formName As String) As Object
+        Dim myasm As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly()
+
+        Try
+            Return myasm.CreateInstance(myasm.GetName.Name.Replace(" ", "_") & "." & formName)
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
     Private Sub addBrukerbehandling()
-        createButton(1, "Brukerbehandling", New frmBrukerbehandling)
+        createButton(1, "Brukerbehandling", "frmBrukerbehandling")
     End Sub
 
     Private Sub addEndreBruker()
-        createButton(2, "Endre bruker", New frmEndreBruker)
+        createButton(2, "Endre bruker", "frmEndreBruker")
     End Sub
 
     Private Sub addKunderegistrering()
-        createButton(3, "Kunderegistrering", New frmKunderegistrering)
+        createButton(3, "Kunderegistrering", "frmKunderegistrering")
     End Sub
 
     Private Sub addEndreKunde()
-        createButton(4, "Endre kunde", New frmEndreKunde)
+        createButton(4, "Endre kunde", "frmEndreKunde")
     End Sub
 
     Private Sub addProduktRegistrering()
-        createButton(5, "Produktregistrering", New frmProduktRegistrering)
+        createButton(5, "Produktregistrering", "frmProduktRegistrering")
     End Sub
 
     Private Sub addEndreProdukt()
-        createButton(6, "Endre produkt", New frmEndreProdukt)
+        createButton(6, "Endre produkt", "frmEndreProdukt")
     End Sub
 
     Private Sub addUtleieRegistrering()
-        createButton(7, "Utleieregistrering", New frmUtleieregistrering)
+        createButton(7, "Utleieregistrering", "frmUtleieregistrering")
     End Sub
 
     Private Sub addEndreUtleie()
-        createButton(8, "Endre utleie", New frmEndreUtleie)
+        createButton(8, "Endre utleie", "frmEndreUtleie")
     End Sub
 
     Private Sub addPakkeregistrering()
-        createButton(9, "Pakkeregistrering", New frmPakkeregistrering)
+        createButton(9, "Pakkeregistrering", "frmPakkeregistrering")
     End Sub
 
     Private Sub addEndrePakke()
-        createButton(10, "Endre pakke", New frmEndrePakke)
+        createButton(10, "Endre pakke", "frmEndrePakke")
     End Sub
 
     Private Sub addStatistikk()
-        createButton(11, "Statistikk", New frmStatistikk)
+        createButton(11, "Statistikk", "frmStatistikk")
     End Sub
 
     Private Sub frmHoved_FormClosed(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles MyBase.FormClosed
