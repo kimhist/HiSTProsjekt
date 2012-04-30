@@ -1,5 +1,6 @@
 ﻿Public Class frmBrukerbehandling
-    Private bruker As Bruker
+    Private person_id As Integer
+    Private oppkobling As New Sql()
 
     Sub New()
         InitializeComponent()
@@ -7,8 +8,34 @@
 
     Sub New(ByVal bruker As Bruker)
         If (bruker IsNot Nothing) Then
-            Me.bruker = bruker
+            person_id = bruker.person_id
             InitializeComponent()
+
+            Try
+                oppkobling.kobleTil()
+            Catch ex As Exception
+                MessageBox.Show("Kunne ikke koble til database", "Feilmelding", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Me.DialogResult = DialogResult.Abort
+            End Try
+
+            init()
+        End If
+    End Sub
+
+    Private Sub init()
+        If (person_id <> 0) Then
+            Dim myData As New DataTable
+            myData = oppkobling.Query("SELECT * FROM bruker, person, stilling WHERE bruker.person_id = person.person_id AND bruker.stilling_id = stilling.stilling_id AND bruker.person_id = """ & person_id & """")
+            Dim rad As DataRow = myData.Rows.Item(0)
+
+            txtFornavn.Text = rad("fornavn")
+            txtEtternavn.Text = rad("etternavn")
+            txtAdresse.Text = rad("adresse")
+            txtTelefon.Text = rad("telefonNr")
+            txtPostnr.Text = rad("postnr")
+            ' Født her
+            txtBrukernavn.Text = rad("brukernavn")
+            txtPassord.Text = rad("passord")
         End If
     End Sub
 
