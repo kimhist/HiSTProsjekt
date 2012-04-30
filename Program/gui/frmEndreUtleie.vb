@@ -26,12 +26,14 @@
     Private Sub cbNavnProduktNavn_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbProduktId.SelectedIndexChanged
         Dim selected As ComboBoxValue = cbProduktId.SelectedItem
 
-        Dim myData As New DataTable
-        myData = oppkobling.Query("SELECT datoFra, datoTil, fornavn, etternavn FROM bestilling, person WHERE bestilling.kunde = person.person_id AND bestilling_id = """ & selected.ID & """")
-        Dim rad As DataRow = myData.Rows.Item(0)
-        dtpFra.Text = rad("datoFra")
-        dtpTil.Text = rad("datoTil")
-        txtKunde.Text = rad("etternavn") & ", " & rad("fornavn")
+        If (selected IsNot Nothing) Then
+            Dim myData As New DataTable
+            myData = oppkobling.Query("SELECT datoFra, datoTil, fornavn, etternavn FROM bestilling, person WHERE bestilling.kunde = person.person_id AND bestilling_id = """ & selected.ID & """")
+            Dim rad As DataRow = myData.Rows.Item(0)
+            dtpFra.Text = rad("datoFra")
+            dtpTil.Text = rad("datoTil")
+            txtKunde.Text = rad("etternavn") & ", " & rad("fornavn")
+        End If
     End Sub
 
     Private Sub btnEndre_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEndre.Click

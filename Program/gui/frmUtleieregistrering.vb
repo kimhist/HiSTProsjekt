@@ -38,24 +38,43 @@
         End If
 
         Dim myData2 As New DataTable
-        myData2 = oppkobling.Query("SELECT navn, beskrivelse FROM bestillingsprodukt, produkt WHERE bestillingsprodukt.produkt_id = produkt.produkt_id AND bestillingsprodukt.produkt_id = """ & id & """")
+        myData2 = oppkobling.Query("SELECT bestillingsprodukt.produkt_id, navn, beskrivelse FROM bestillingsprodukt, produkt WHERE bestillingsprodukt.produkt_id = produkt.produkt_id AND bestillingsprodukt.produkt_id = """ & id & """")
         Dim rad2 As DataRow
         For Each rad2 In myData2.Rows
-            addProdukt(rad2("navn"), rad2("beskrivelse"))
+            addProdukt(rad2("produkt_id"), rad2("navn"), rad2("beskrivelse"))
         Next rad2
     End Sub
 
-    Private Sub addProdukt(ByVal navn As String, ByVal beskrivelse As String)
+    Private Sub addProdukt(ByVal id As String, ByVal navn As String, ByVal beskrivelse As String)
+        Dim item As ListViewItem
+        For Each item In lvProdukt.Items
+            Dim _id As String = item.SubItems.Item(0).Text
 
+            If (_id = id) Then
+                Return
+            End If
+        Next item
+
+        Dim str(2) As String
+        str(0) = id
+        str(1) = navn
+        str(2) = beskrivelse
+        Dim itm As ListViewItem = New ListViewItem(str)
+        lvProdukt.Items.Add(itm)
+
+        For Each column As ColumnHeader In Me.lvProdukt.Columns
+            column.Width = -2
+        Next column
     End Sub
 
     Private Sub initListViewProdukt()
+        lvProdukt.Columns.Add("Id")
         lvProdukt.Columns.Add("Navn")
         lvProdukt.Columns.Add("Beskrivelse")
 
         For Each column As ColumnHeader In Me.lvProdukt.Columns
             column.Width = -2
-        Next
+        Next column
     End Sub
 
     Private Sub initKunder()
@@ -71,13 +90,15 @@
     Private Sub cbKundeNavn_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbKundeNavn.SelectedIndexChanged
         Dim selected As ComboBoxValue = cbKundeNavn.SelectedItem
 
-        Dim myData As New DataTable
-        myData = oppkobling.Query("SELECT adresse, hoyde, vekt, skoNr FROM kunde, person WHERE kunde.person_id = person.person_id AND kunde.person_id = """ & selected.ID & """")
-        Dim rad As DataRow = myData.Rows.Item(0)
-        txtKundeAdresse.Text = rad("adresse")
-        txtKundeHoyde.Text = rad("hoyde")
-        txtKundeVekt.Text = rad("vekt")
-        txtKundeSkonr.Text = rad("skoNr")
+        If (selected IsNot Nothing) Then
+            Dim myData As New DataTable
+            myData = oppkobling.Query("SELECT adresse, hoyde, vekt, skoNr FROM kunde, person WHERE kunde.person_id = person.person_id AND kunde.person_id = """ & selected.ID & """")
+            Dim rad As DataRow = myData.Rows.Item(0)
+            txtKundeAdresse.Text = rad("adresse")
+            txtKundeHoyde.Text = rad("hoyde")
+            txtKundeVekt.Text = rad("vekt")
+            txtKundeSkonr.Text = rad("skoNr")
+        End If
     End Sub
 
     Private Sub frmUtleieregistrering_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -91,5 +112,44 @@
         initKunder()
         initListViewProdukt()
         init()
+    End Sub
+
+    Private Sub btnProduktFjern_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnProduktFjern.Click
+        Dim item As ListViewItem
+        For Each item In lvProdukt.SelectedItems
+            lvProdukt.Items.Remove(item)
+        Next item
+    End Sub
+
+    Private Sub btnKundeEndre_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnKundeEndre.Click
+        Dim selected As ComboBoxValue = cbKundeNavn.SelectedItem
+
+        If (selected IsNot Nothing) Then
+            Dim dialog As New frmKunderegistrering
+
+            If (dialog.ShowDialog() = DialogResult.OK) Then
+
+            End If
+        End If
+    End Sub
+
+    Private Sub btnKundeOpprett_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnKundeOpprett.Click
+        Dim dialog As New frmKunderegistrering
+
+        If (dialog.ShowDialog() = DialogResult.OK) Then
+
+        End If
+    End Sub
+
+    Private Sub btnProduktLeggTil_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnProduktLeggTil.Click
+        Dim dialog As New frmDialogUtleieProdukt
+
+        If (dialog.ShowDialog() = DialogResult.OK) Then
+            addProdukt(dialog.produkt.id, dialog.produkt.navn, dialog.produkt.beskrivelse)
+        End If
+    End Sub
+
+    Private Sub btnAvbryt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAvbryt.Click
+        Me.DialogResult = DialogResult.Cancel
     End Sub
 End Class

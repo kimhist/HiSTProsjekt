@@ -71,6 +71,10 @@
         str(1) = varighet
         Dim itm As ListViewItem = New ListViewItem(str)
         lvPriser.Items.Add(itm)
+
+        For Each column As ColumnHeader In Me.lvPriser.Columns
+            column.Width = -2
+        Next
     End Sub
 
     Private Sub initListViewPriser()

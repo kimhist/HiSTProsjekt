@@ -56,7 +56,7 @@ Partial Class frmEndreBruker
         Me.cbNavn.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cbNavn.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cbNavn.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cbNavn.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cbNavn.FormattingEnabled = True
         Me.cbNavn.Location = New System.Drawing.Point(102, 12)
