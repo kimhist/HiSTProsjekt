@@ -1,14 +1,15 @@
 ﻿Imports System.Reflection
 
 Public Class frmHoved
+    Public Shared login As Login
+
     Private caller As Form
-    Private login As Login
 
     Sub New(ByRef caller As Object, ByVal login As Login)
         Me.caller = caller
 
         If (login IsNot Nothing) Then
-            Me.login = login
+            frmHoved.login = login
             InitializeComponent()
             init()
         Else
@@ -72,47 +73,47 @@ Public Class frmHoved
     End Function
 
     Private Sub addBrukerbehandling()
-        createButton(1, "Brukerbehandling", "frmBrukerbehandling")
+        createButton(1, "&Brukerbehandling", "frmBrukerbehandling")
     End Sub
 
     Private Sub addEndreBruker()
-        createButton(2, "Endre bruker", "frmEndreBruker")
+        createButton(2, "Endre b&ruker", "frmEndreBruker")
     End Sub
 
     Private Sub addKunderegistrering()
-        createButton(3, "Kunderegistrering", "frmKunderegistrering")
+        createButton(3, "&Kunderegistrering", "frmKunderegistrering")
     End Sub
 
     Private Sub addEndreKunde()
-        createButton(4, "Endre kunde", "frmEndreKunde")
+        createButton(4, "Endre k&unde", "frmEndreKunde")
     End Sub
 
     Private Sub addProduktRegistrering()
-        createButton(5, "Produktregistrering", "frmProduktRegistrering")
+        createButton(5, "&Produktregistrering", "frmProduktRegistrering")
     End Sub
 
     Private Sub addEndreProdukt()
-        createButton(6, "Endre produkt", "frmEndreProdukt")
+        createButton(6, "Endre pr&odukt", "frmEndreProdukt")
     End Sub
 
     Private Sub addUtleieRegistrering()
-        createButton(7, "Utleieregistrering", "frmUtleieregistrering")
+        createButton(7, "&Utleieregistrering", "frmUtleieregistrering")
     End Sub
 
     Private Sub addEndreUtleie()
-        createButton(8, "Endre utleie", "frmEndreUtleie")
+        createButton(8, "Endre u&tleie", "frmEndreUtleie")
     End Sub
 
     Private Sub addPakkeregistrering()
-        createButton(9, "Pakkeregistrering", "frmPakkeregistrering")
+        createButton(9, "P&akkeregistrering", "frmPakkeregistrering")
     End Sub
 
     Private Sub addEndrePakke()
-        createButton(10, "Endre pakke", "frmEndrePakke")
+        createButton(10, "Endre pa&kke", "frmEndrePakke")
     End Sub
 
     Private Sub addStatistikk()
-        createButton(11, "Statistikk", "frmStatistikk")
+        createButton(11, "&Statistikk", "frmStatistikk")
     End Sub
 
     Private Sub frmHoved_FormClosed(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles MyBase.FormClosed
@@ -122,5 +123,9 @@ Public Class frmHoved
     Private Sub tsmiLogout_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsmiLogout.Click
         caller.Show()
         Me.Dispose()
+    End Sub
+
+    Private Sub tsmiBrukermanual_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsmiBrukermanual.Click
+        System.Diagnostics.Process.Start("http://sportutleie.wikidot.com/")
     End Sub
 End Class

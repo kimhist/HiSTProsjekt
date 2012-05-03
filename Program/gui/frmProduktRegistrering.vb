@@ -93,7 +93,7 @@
             Dim updatedId As Integer = id
 
             If (id <> 0) Then
-                oppkobling.Query("UPDATE produkt SET navn = """ & txtNavn.Text & """, beskrivelse = """ & txtBeskrivelse.Text & """, pGruppe_id = """ & gruppeId & """")
+                oppkobling.Query("UPDATE produkt SET navn = """ & txtNavn.Text & """, beskrivelse = """ & txtBeskrivelse.Text & """, pGruppe_id = """ & gruppeId & """ WHERE produkt_id = """ & id & """")
             Else
                 updatedId = oppkobling.executeQuery("INSERT INTO produkt (navn, beskrivelse, pGruppe_id) VALUES (""" & txtNavn.Text & """, """ & txtBeskrivelse.Text & """, """ & gruppeId & """)")
             End If

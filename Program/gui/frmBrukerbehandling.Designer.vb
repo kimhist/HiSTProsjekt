@@ -257,7 +257,7 @@ Partial Class frmBrukerbehandling
         Me.lblPostnr.Name = "lblPostnr"
         Me.lblPostnr.Size = New System.Drawing.Size(65, 13)
         Me.lblPostnr.TabIndex = 7
-        Me.lblPostnr.Text = "Postnummer"
+        Me.lblPostnr.Text = "&Postnummer"
         '
         'txtPostnr
         '

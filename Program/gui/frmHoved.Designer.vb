@@ -22,28 +22,21 @@ Partial Class frmHoved
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmHoved))
         Me.msMenu = New System.Windows.Forms.MenuStrip()
-        Me.tsmiLogout = New System.Windows.Forms.ToolStripMenuItem()
         Me.pnHoved = New System.Windows.Forms.Panel()
+        Me.tsmiLogout = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiBrukermanual = New System.Windows.Forms.ToolStripMenuItem()
         Me.msMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'msMenu
         '
-        Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiLogout})
+        Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiLogout, Me.tsmiBrukermanual})
         Me.msMenu.Location = New System.Drawing.Point(0, 0)
         Me.msMenu.Name = "msMenu"
         Me.msMenu.Size = New System.Drawing.Size(270, 24)
         Me.msMenu.TabIndex = 0
         Me.msMenu.Text = "Menu"
-        '
-        'tsmiLogout
-        '
-        Me.tsmiLogout.Image = CType(resources.GetObject("tsmiLogout.Image"), System.Drawing.Image)
-        Me.tsmiLogout.Name = "tsmiLogout"
-        Me.tsmiLogout.Size = New System.Drawing.Size(76, 20)
-        Me.tsmiLogout.Text = "&Logg ut"
         '
         'pnHoved
         '
@@ -53,6 +46,20 @@ Partial Class frmHoved
         Me.pnHoved.Name = "pnHoved"
         Me.pnHoved.Size = New System.Drawing.Size(270, 119)
         Me.pnHoved.TabIndex = 1
+        '
+        'tsmiLogout
+        '
+        Me.tsmiLogout.Image = Global.Program.My.Resources.Resources.logout
+        Me.tsmiLogout.Name = "tsmiLogout"
+        Me.tsmiLogout.Size = New System.Drawing.Size(76, 20)
+        Me.tsmiLogout.Text = "&Logg ut"
+        '
+        'tsmiBrukermanual
+        '
+        Me.tsmiBrukermanual.Image = Global.Program.My.Resources.Resources.support
+        Me.tsmiBrukermanual.Name = "tsmiBrukermanual"
+        Me.tsmiBrukermanual.Size = New System.Drawing.Size(109, 20)
+        Me.tsmiBrukermanual.Text = "&Brukermanual"
         '
         'frmHoved
         '
@@ -74,4 +81,5 @@ Partial Class frmHoved
     Friend WithEvents msMenu As System.Windows.Forms.MenuStrip
     Friend WithEvents tsmiLogout As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents pnHoved As System.Windows.Forms.Panel
+    Friend WithEvents tsmiBrukermanual As System.Windows.Forms.ToolStripMenuItem
 End Class

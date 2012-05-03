@@ -23,8 +23,11 @@ Partial Class frmUtleieregistrering
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.scMain = New System.Windows.Forms.SplitContainer()
+        Me.dtpTil = New System.Windows.Forms.DateTimePicker()
+        Me.lblTil = New System.Windows.Forms.Label()
         Me.txtMerknader = New System.Windows.Forms.TextBox()
         Me.lblMerknader = New System.Windows.Forms.Label()
+        Me.btnAvbryt = New System.Windows.Forms.Button()
         Me.gbKunde = New System.Windows.Forms.GroupBox()
         Me.txtKundeSkonr = New System.Windows.Forms.TextBox()
         Me.scKundeButtons = New System.Windows.Forms.SplitContainer()
@@ -41,13 +44,12 @@ Partial Class frmUtleieregistrering
         Me.txtKundeHoyde = New System.Windows.Forms.TextBox()
         Me.dtpFra = New System.Windows.Forms.DateTimePicker()
         Me.lblFra = New System.Windows.Forms.Label()
+        Me.btnLagre = New System.Windows.Forms.Button()
         Me.gbProdukt = New System.Windows.Forms.GroupBox()
         Me.lvProdukt = New System.Windows.Forms.ListView()
         Me.scProduktButtons = New System.Windows.Forms.SplitContainer()
         Me.btnProduktFjern = New System.Windows.Forms.Button()
         Me.btnProduktLeggTil = New System.Windows.Forms.Button()
-        Me.btnAvbryt = New System.Windows.Forms.Button()
-        Me.btnLagre = New System.Windows.Forms.Button()
         CType(Me.scMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.scMain.Panel1.SuspendLayout()
         Me.scMain.Panel2.SuspendLayout()
@@ -73,6 +75,8 @@ Partial Class frmUtleieregistrering
         '
         'scMain.Panel1
         '
+        Me.scMain.Panel1.Controls.Add(Me.dtpTil)
+        Me.scMain.Panel1.Controls.Add(Me.lblTil)
         Me.scMain.Panel1.Controls.Add(Me.txtMerknader)
         Me.scMain.Panel1.Controls.Add(Me.lblMerknader)
         Me.scMain.Panel1.Controls.Add(Me.btnAvbryt)
@@ -86,30 +90,65 @@ Partial Class frmUtleieregistrering
         Me.scMain.Panel2.Controls.Add(Me.btnLagre)
         Me.scMain.Panel2.Controls.Add(Me.gbProdukt)
         Me.scMain.Panel2MinSize = 300
-        Me.scMain.Size = New System.Drawing.Size(660, 350)
+        Me.scMain.Size = New System.Drawing.Size(660, 386)
         Me.scMain.SplitterDistance = 327
         Me.scMain.TabIndex = 0
         Me.scMain.TabStop = False
+        '
+        'dtpTil
+        '
+        Me.dtpTil.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtpTil.CustomFormat = "yyyy-MM-dd HH:mm"
+        Me.dtpTil.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpTil.Location = New System.Drawing.Point(106, 36)
+        Me.dtpTil.Name = "dtpTil"
+        Me.dtpTil.Size = New System.Drawing.Size(208, 20)
+        Me.dtpTil.TabIndex = 3
+        '
+        'lblTil
+        '
+        Me.lblTil.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblTil.AutoSize = True
+        Me.lblTil.Location = New System.Drawing.Point(15, 41)
+        Me.lblTil.Name = "lblTil"
+        Me.lblTil.Size = New System.Drawing.Size(18, 13)
+        Me.lblTil.TabIndex = 2
+        Me.lblTil.Text = "&Til"
         '
         'txtMerknader
         '
         Me.txtMerknader.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtMerknader.Location = New System.Drawing.Point(106, 40)
+        Me.txtMerknader.Location = New System.Drawing.Point(106, 62)
         Me.txtMerknader.Name = "txtMerknader"
         Me.txtMerknader.Size = New System.Drawing.Size(208, 20)
-        Me.txtMerknader.TabIndex = 3
+        Me.txtMerknader.TabIndex = 5
         '
         'lblMerknader
         '
         Me.lblMerknader.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblMerknader.AutoSize = True
-        Me.lblMerknader.Location = New System.Drawing.Point(18, 43)
+        Me.lblMerknader.Location = New System.Drawing.Point(15, 65)
         Me.lblMerknader.Name = "lblMerknader"
         Me.lblMerknader.Size = New System.Drawing.Size(58, 13)
-        Me.lblMerknader.TabIndex = 2
+        Me.lblMerknader.TabIndex = 4
         Me.lblMerknader.Text = "&Merknader"
+        '
+        'btnAvbryt
+        '
+        Me.btnAvbryt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnAvbryt.Image = Global.Program.My.Resources.Resources.cancel
+        Me.btnAvbryt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAvbryt.Location = New System.Drawing.Point(12, 350)
+        Me.btnAvbryt.Name = "btnAvbryt"
+        Me.btnAvbryt.Size = New System.Drawing.Size(59, 23)
+        Me.btnAvbryt.TabIndex = 19
+        Me.btnAvbryt.Text = "A&vbryt"
+        Me.btnAvbryt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAvbryt.UseVisualStyleBackColor = True
         '
         'gbKunde
         '
@@ -126,7 +165,7 @@ Partial Class frmUtleieregistrering
         Me.gbKunde.Controls.Add(Me.lblKundeHoyde)
         Me.gbKunde.Controls.Add(Me.lblKundeVekt)
         Me.gbKunde.Controls.Add(Me.txtKundeHoyde)
-        Me.gbKunde.Location = New System.Drawing.Point(12, 82)
+        Me.gbKunde.Location = New System.Drawing.Point(12, 115)
         Me.gbKunde.Name = "gbKunde"
         Me.gbKunde.Size = New System.Drawing.Size(302, 212)
         Me.gbKunde.TabIndex = 8
@@ -167,7 +206,7 @@ Partial Class frmUtleieregistrering
         Me.btnKundeEndre.Location = New System.Drawing.Point(0, 0)
         Me.btnKundeEndre.Name = "btnKundeEndre"
         Me.btnKundeEndre.Size = New System.Drawing.Size(147, 27)
-        Me.btnKundeEndre.TabIndex = 14
+        Me.btnKundeEndre.TabIndex = 9
         Me.btnKundeEndre.Text = "&Endre"
         Me.btnKundeEndre.UseVisualStyleBackColor = True
         '
@@ -177,7 +216,7 @@ Partial Class frmUtleieregistrering
         Me.btnKundeOpprett.Location = New System.Drawing.Point(0, 0)
         Me.btnKundeOpprett.Name = "btnKundeOpprett"
         Me.btnKundeOpprett.Size = New System.Drawing.Size(145, 27)
-        Me.btnKundeOpprett.TabIndex = 15
+        Me.btnKundeOpprett.TabIndex = 10
         Me.btnKundeOpprett.Text = "&Opprett ny"
         Me.btnKundeOpprett.UseVisualStyleBackColor = True
         '
@@ -189,7 +228,7 @@ Partial Class frmUtleieregistrering
         Me.cbKundeNavn.Location = New System.Drawing.Point(94, 19)
         Me.cbKundeNavn.Name = "cbKundeNavn"
         Me.cbKundeNavn.Size = New System.Drawing.Size(198, 21)
-        Me.cbKundeNavn.TabIndex = 5
+        Me.cbKundeNavn.TabIndex = 7
         '
         'lblKundeSkonr
         '
@@ -210,7 +249,7 @@ Partial Class frmUtleieregistrering
         Me.lblKundeAdresse.Location = New System.Drawing.Point(21, 49)
         Me.lblKundeAdresse.Name = "lblKundeAdresse"
         Me.lblKundeAdresse.Size = New System.Drawing.Size(45, 13)
-        Me.lblKundeAdresse.TabIndex = 6
+        Me.lblKundeAdresse.TabIndex = 8
         Me.lblKundeAdresse.Text = "Adresse"
         '
         'txtKundeAdresse
@@ -221,7 +260,7 @@ Partial Class frmUtleieregistrering
         Me.txtKundeAdresse.Location = New System.Drawing.Point(94, 46)
         Me.txtKundeAdresse.Name = "txtKundeAdresse"
         Me.txtKundeAdresse.Size = New System.Drawing.Size(198, 20)
-        Me.txtKundeAdresse.TabIndex = 7
+        Me.txtKundeAdresse.TabIndex = 9
         '
         'txtKundeVekt
         '
@@ -241,7 +280,7 @@ Partial Class frmUtleieregistrering
         Me.lblKundeNavn.Location = New System.Drawing.Point(21, 22)
         Me.lblKundeNavn.Name = "lblKundeNavn"
         Me.lblKundeNavn.Size = New System.Drawing.Size(33, 13)
-        Me.lblKundeNavn.TabIndex = 4
+        Me.lblKundeNavn.TabIndex = 6
         Me.lblKundeNavn.Text = "&Navn"
         '
         'lblKundeHoyde
@@ -298,6 +337,19 @@ Partial Class frmUtleieregistrering
         Me.lblFra.TabIndex = 0
         Me.lblFra.Text = "&Fra"
         '
+        'btnLagre
+        '
+        Me.btnLagre.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnLagre.Image = Global.Program.My.Resources.Resources.confirm
+        Me.btnLagre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLagre.Location = New System.Drawing.Point(258, 350)
+        Me.btnLagre.Name = "btnLagre"
+        Me.btnLagre.Size = New System.Drawing.Size(58, 23)
+        Me.btnLagre.TabIndex = 20
+        Me.btnLagre.Text = "&Lagre"
+        Me.btnLagre.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnLagre.UseVisualStyleBackColor = True
+        '
         'gbProdukt
         '
         Me.gbProdukt.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -307,7 +359,7 @@ Partial Class frmUtleieregistrering
         Me.gbProdukt.Controls.Add(Me.scProduktButtons)
         Me.gbProdukt.Location = New System.Drawing.Point(12, 6)
         Me.gbProdukt.Name = "gbProdukt"
-        Me.gbProdukt.Size = New System.Drawing.Size(304, 288)
+        Me.gbProdukt.Size = New System.Drawing.Size(304, 321)
         Me.gbProdukt.TabIndex = 6
         Me.gbProdukt.TabStop = False
         Me.gbProdukt.Text = "Produkt"
@@ -319,7 +371,7 @@ Partial Class frmUtleieregistrering
         Me.lvProdukt.GridLines = True
         Me.lvProdukt.Location = New System.Drawing.Point(3, 16)
         Me.lvProdukt.Name = "lvProdukt"
-        Me.lvProdukt.Size = New System.Drawing.Size(298, 242)
+        Me.lvProdukt.Size = New System.Drawing.Size(298, 275)
         Me.lvProdukt.TabIndex = 2
         Me.lvProdukt.TabStop = False
         Me.lvProdukt.UseCompatibleStateImageBehavior = False
@@ -328,7 +380,7 @@ Partial Class frmUtleieregistrering
         'scProduktButtons
         '
         Me.scProduktButtons.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.scProduktButtons.Location = New System.Drawing.Point(3, 258)
+        Me.scProduktButtons.Location = New System.Drawing.Point(3, 291)
         Me.scProduktButtons.Name = "scProduktButtons"
         '
         'scProduktButtons.Panel1
@@ -363,37 +415,11 @@ Partial Class frmUtleieregistrering
         Me.btnProduktLeggTil.Text = "&Legg til"
         Me.btnProduktLeggTil.UseVisualStyleBackColor = True
         '
-        'btnAvbryt
-        '
-        Me.btnAvbryt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAvbryt.Image = Global.Program.My.Resources.Resources.cancel
-        Me.btnAvbryt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAvbryt.Location = New System.Drawing.Point(12, 314)
-        Me.btnAvbryt.Name = "btnAvbryt"
-        Me.btnAvbryt.Size = New System.Drawing.Size(59, 23)
-        Me.btnAvbryt.TabIndex = 19
-        Me.btnAvbryt.Text = "A&vbryt"
-        Me.btnAvbryt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAvbryt.UseVisualStyleBackColor = True
-        '
-        'btnLagre
-        '
-        Me.btnLagre.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnLagre.Image = Global.Program.My.Resources.Resources.confirm
-        Me.btnLagre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLagre.Location = New System.Drawing.Point(258, 314)
-        Me.btnLagre.Name = "btnLagre"
-        Me.btnLagre.Size = New System.Drawing.Size(58, 23)
-        Me.btnLagre.TabIndex = 20
-        Me.btnLagre.Text = "&Lagre"
-        Me.btnLagre.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnLagre.UseVisualStyleBackColor = True
-        '
         'frmUtleieregistrering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(660, 350)
+        Me.ClientSize = New System.Drawing.Size(660, 386)
         Me.Controls.Add(Me.scMain)
         Me.Name = "frmUtleieregistrering"
         Me.Text = "Utleieregistrering"
@@ -442,4 +468,6 @@ Partial Class frmUtleieregistrering
     Friend WithEvents txtMerknader As System.Windows.Forms.TextBox
     Friend WithEvents lblMerknader As System.Windows.Forms.Label
     Friend WithEvents lvProdukt As System.Windows.Forms.ListView
+    Friend WithEvents dtpTil As System.Windows.Forms.DateTimePicker
+    Friend WithEvents lblTil As System.Windows.Forms.Label
 End Class
