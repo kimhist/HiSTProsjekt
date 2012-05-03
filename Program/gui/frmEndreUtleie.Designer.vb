@@ -63,7 +63,7 @@ Partial Class frmEndreUtleie
         Me.lblTil.Location = New System.Drawing.Point(15, 87)
         Me.lblTil.Name = "lblTil"
         Me.lblTil.Size = New System.Drawing.Size(18, 13)
-        Me.lblTil.TabIndex = 3
+        Me.lblTil.TabIndex = 4
         Me.lblTil.Text = "Til"
         '
         'lblKunde
@@ -74,7 +74,7 @@ Partial Class frmEndreUtleie
         Me.lblKunde.Location = New System.Drawing.Point(15, 111)
         Me.lblKunde.Name = "lblKunde"
         Me.lblKunde.Size = New System.Drawing.Size(38, 13)
-        Me.lblKunde.TabIndex = 4
+        Me.lblKunde.TabIndex = 6
         Me.lblKunde.Text = "Kunde"
         '
         'dtpTil
@@ -87,7 +87,7 @@ Partial Class frmEndreUtleie
         Me.dtpTil.Location = New System.Drawing.Point(59, 81)
         Me.dtpTil.Name = "dtpTil"
         Me.dtpTil.Size = New System.Drawing.Size(208, 20)
-        Me.dtpTil.TabIndex = 6
+        Me.dtpTil.TabIndex = 5
         '
         'dtpFra
         '
@@ -99,7 +99,7 @@ Partial Class frmEndreUtleie
         Me.dtpFra.Location = New System.Drawing.Point(59, 55)
         Me.dtpFra.Name = "dtpFra"
         Me.dtpFra.Size = New System.Drawing.Size(208, 20)
-        Me.dtpFra.TabIndex = 5
+        Me.dtpFra.TabIndex = 3
         '
         'txtKunde
         '
@@ -132,7 +132,7 @@ Partial Class frmEndreUtleie
         Me.cbProduktId.Location = New System.Drawing.Point(59, 12)
         Me.cbProduktId.Name = "cbProduktId"
         Me.cbProduktId.Size = New System.Drawing.Size(208, 21)
-        Me.cbProduktId.TabIndex = 9
+        Me.cbProduktId.TabIndex = 1
         '
         'frmEndreUtleie
         '

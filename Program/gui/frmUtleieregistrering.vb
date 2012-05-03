@@ -141,7 +141,8 @@
                 Next item
             End If
         Else
-
+            MessageBox.Show("Velg kunde!", "Feilmelding", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            cbKundeNavn.Focus()
         End If
     End Sub
 

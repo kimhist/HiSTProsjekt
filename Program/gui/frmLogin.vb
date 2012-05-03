@@ -19,7 +19,7 @@
         End Try
     End Sub
 
-    Private Sub txtBrukernavn_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtBrukernavn.KeyDown, txtPassord.KeyDown
+    Private Sub txt_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtBrukernavn.KeyDown, txtPassord.KeyDown
         If e.KeyCode = Keys.Enter Then
             e.SuppressKeyPress = True
             attemptLogin()
