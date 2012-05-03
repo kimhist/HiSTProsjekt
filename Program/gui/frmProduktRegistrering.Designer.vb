@@ -33,6 +33,7 @@ Partial Class frmProduktRegistrering
         Me.scPriserButtons = New System.Windows.Forms.SplitContainer()
         Me.btnPriserFjern = New System.Windows.Forms.Button()
         Me.btnPrisLeggTil = New System.Windows.Forms.Button()
+        Me.cbVedlikehold = New System.Windows.Forms.CheckBox()
         Me.btnAvbryt = New System.Windows.Forms.Button()
         Me.btnLagre = New System.Windows.Forms.Button()
         Me.gbPriser.SuspendLayout()
@@ -118,10 +119,10 @@ Partial Class frmProduktRegistrering
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.gbPriser.Controls.Add(Me.lvPriser)
         Me.gbPriser.Controls.Add(Me.scPriserButtons)
-        Me.gbPriser.Location = New System.Drawing.Point(18, 108)
+        Me.gbPriser.Location = New System.Drawing.Point(18, 141)
         Me.gbPriser.Name = "gbPriser"
-        Me.gbPriser.Size = New System.Drawing.Size(250, 157)
-        Me.gbPriser.TabIndex = 6
+        Me.gbPriser.Size = New System.Drawing.Size(250, 164)
+        Me.gbPriser.TabIndex = 7
         Me.gbPriser.TabStop = False
         Me.gbPriser.Text = "Priser"
         '
@@ -132,7 +133,7 @@ Partial Class frmProduktRegistrering
         Me.lvPriser.GridLines = True
         Me.lvPriser.Location = New System.Drawing.Point(3, 16)
         Me.lvPriser.Name = "lvPriser"
-        Me.lvPriser.Size = New System.Drawing.Size(244, 113)
+        Me.lvPriser.Size = New System.Drawing.Size(244, 120)
         Me.lvPriser.TabIndex = 1
         Me.lvPriser.TabStop = False
         Me.lvPriser.UseCompatibleStateImageBehavior = False
@@ -141,7 +142,7 @@ Partial Class frmProduktRegistrering
         'scPriserButtons
         '
         Me.scPriserButtons.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.scPriserButtons.Location = New System.Drawing.Point(3, 129)
+        Me.scPriserButtons.Location = New System.Drawing.Point(3, 136)
         Me.scPriserButtons.Name = "scPriserButtons"
         '
         'scPriserButtons.Panel1
@@ -162,7 +163,7 @@ Partial Class frmProduktRegistrering
         Me.btnPriserFjern.Location = New System.Drawing.Point(0, 0)
         Me.btnPriserFjern.Name = "btnPriserFjern"
         Me.btnPriserFjern.Size = New System.Drawing.Size(122, 25)
-        Me.btnPriserFjern.TabIndex = 0
+        Me.btnPriserFjern.TabIndex = 8
         Me.btnPriserFjern.Text = "&Fjern pris"
         Me.btnPriserFjern.UseVisualStyleBackColor = True
         '
@@ -172,19 +173,29 @@ Partial Class frmProduktRegistrering
         Me.btnPrisLeggTil.Location = New System.Drawing.Point(0, 0)
         Me.btnPrisLeggTil.Name = "btnPrisLeggTil"
         Me.btnPrisLeggTil.Size = New System.Drawing.Size(118, 25)
-        Me.btnPrisLeggTil.TabIndex = 0
+        Me.btnPrisLeggTil.TabIndex = 9
         Me.btnPrisLeggTil.Text = "L&egg til pris"
         Me.btnPrisLeggTil.UseVisualStyleBackColor = True
+        '
+        'cbVedlikehold
+        '
+        Me.cbVedlikehold.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.cbVedlikehold.Location = New System.Drawing.Point(14, 92)
+        Me.cbVedlikehold.Name = "cbVedlikehold"
+        Me.cbVedlikehold.Size = New System.Drawing.Size(122, 24)
+        Me.cbVedlikehold.TabIndex = 6
+        Me.cbVedlikehold.Text = "Hos &vedlikehold"
+        Me.cbVedlikehold.UseVisualStyleBackColor = True
         '
         'btnAvbryt
         '
         Me.btnAvbryt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnAvbryt.Image = Global.Program.My.Resources.Resources.cancel
         Me.btnAvbryt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAvbryt.Location = New System.Drawing.Point(13, 284)
+        Me.btnAvbryt.Location = New System.Drawing.Point(13, 324)
         Me.btnAvbryt.Name = "btnAvbryt"
         Me.btnAvbryt.Size = New System.Drawing.Size(61, 23)
-        Me.btnAvbryt.TabIndex = 8
+        Me.btnAvbryt.TabIndex = 10
         Me.btnAvbryt.Text = "&Avbryt"
         Me.btnAvbryt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAvbryt.UseVisualStyleBackColor = True
@@ -194,10 +205,10 @@ Partial Class frmProduktRegistrering
         Me.btnLagre.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnLagre.Image = Global.Program.My.Resources.Resources.confirm
         Me.btnLagre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLagre.Location = New System.Drawing.Point(213, 284)
+        Me.btnLagre.Location = New System.Drawing.Point(213, 324)
         Me.btnLagre.Name = "btnLagre"
         Me.btnLagre.Size = New System.Drawing.Size(59, 23)
-        Me.btnLagre.TabIndex = 9
+        Me.btnLagre.TabIndex = 11
         Me.btnLagre.Text = "&Lagre"
         Me.btnLagre.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnLagre.UseVisualStyleBackColor = True
@@ -206,7 +217,8 @@ Partial Class frmProduktRegistrering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 316)
+        Me.ClientSize = New System.Drawing.Size(284, 356)
+        Me.Controls.Add(Me.cbVedlikehold)
         Me.Controls.Add(Me.btnAvbryt)
         Me.Controls.Add(Me.btnLagre)
         Me.Controls.Add(Me.gbPriser)
@@ -240,4 +252,5 @@ Partial Class frmProduktRegistrering
     Friend WithEvents btnPriserFjern As System.Windows.Forms.Button
     Friend WithEvents btnPrisLeggTil As System.Windows.Forms.Button
     Friend WithEvents lvPriser As System.Windows.Forms.ListView
+    Friend WithEvents cbVedlikehold As System.Windows.Forms.CheckBox
 End Class

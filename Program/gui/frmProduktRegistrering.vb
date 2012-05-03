@@ -47,6 +47,15 @@
             For Each rad2 In myData2.Rows
                 addPris(rad2("pris"), rad2("varighet"))
             Next rad2
+
+            Dim myData3 As New DataTable
+            myData3 = oppkobling.Query("SELECT vedlikehold_id FROM vedlikehold WHERE produkt_id = """ & id & """ AND datoUt IS NULL")
+
+            If (myData3.Rows.Count > 0) Then
+                cbVedlikehold.Checked = True
+            End If
+        Else
+            cbVedlikehold.Enabled = False
         End If
     End Sub
 
@@ -185,5 +194,22 @@
 
     Private Sub btnAvbryt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAvbryt.Click
         Me.DialogResult = DialogResult.Cancel
+    End Sub
+
+    Private Sub cbVedlikehold_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbVedlikehold.Click
+        If (cbVedlikehold.Checked) Then
+            Dim dialog As New frmDialogVedlikehold
+
+            If (dialog.ShowDialog() = DialogResult.OK) Then
+                oppkobling.executeQuery("UPDATE vedlikehold SET datoUt = NOW() WHERE datoUt IS NULL AND produkt_id = """ & id & """")
+                oppkobling.executeQuery("INSERT INTO vedlikehold (datoInn, utAvDrift, merknader, produkt_id) VALUES (NOW(), """ & Convert.ToInt32(dialog.UtAvDrift) & """, """ & dialog.merknader & """, """ & id & """)")
+            Else
+                cbVedlikehold.Checked = Not cbVedlikehold.Checked
+            End If
+
+            dialog.Dispose()
+        Else
+            oppkobling.executeQuery("UPDATE vedlikehold SET datoUt = NOW() WHERE datoUt IS NULL AND produkt_id = """ & id & """")
+        End If
     End Sub
 End Class
