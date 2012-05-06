@@ -25,121 +25,185 @@ Partial Class frmStatistikk
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Me.rdbUke = New System.Windows.Forms.RadioButton()
-        Me.rdbMaaned = New System.Windows.Forms.RadioButton()
-        Me.rdbAar = New System.Windows.Forms.RadioButton()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.cbValg = New System.Windows.Forms.ComboBox()
-        Me.lblVelgStatisikk = New System.Windows.Forms.Label()
-        Me.GroupBox1.SuspendLayout()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Dim DataPoint1 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0.0R, 10.0R)
+        Dim DataPoint2 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0.0R, 20.0R)
+        Dim DataPoint3 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0.0R, 30.0R)
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Me.tcStatistics = New System.Windows.Forms.TabControl()
+        Me.tpProsentfordeling = New System.Windows.Forms.TabPage()
+        Me.tpAvanse = New System.Windows.Forms.TabPage()
+        Me.chProsentfordeling = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.msMenu = New System.Windows.Forms.MenuStrip()
+        Me.dtpFra = New System.Windows.Forms.DateTimePicker()
+        Me.lblFra = New System.Windows.Forms.Label()
+        Me.lblTil = New System.Windows.Forms.Label()
+        Me.dtpTil = New System.Windows.Forms.DateTimePicker()
+        Me.chAvanse = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.tcStatistics.SuspendLayout()
+        Me.tpProsentfordeling.SuspendLayout()
+        Me.tpAvanse.SuspendLayout()
+        CType(Me.chProsentfordeling, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.chAvanse, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'rdbUke
+        'tcStatistics
         '
-        Me.rdbUke.AutoSize = True
-        Me.rdbUke.Location = New System.Drawing.Point(343, 296)
-        Me.rdbUke.Name = "rdbUke"
-        Me.rdbUke.Size = New System.Drawing.Size(45, 17)
-        Me.rdbUke.TabIndex = 0
-        Me.rdbUke.TabStop = True
-        Me.rdbUke.Text = "Uke"
-        Me.rdbUke.UseVisualStyleBackColor = True
+        Me.tcStatistics.Controls.Add(Me.tpProsentfordeling)
+        Me.tcStatistics.Controls.Add(Me.tpAvanse)
+        Me.tcStatistics.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tcStatistics.Location = New System.Drawing.Point(0, 0)
+        Me.tcStatistics.Name = "tcStatistics"
+        Me.tcStatistics.SelectedIndex = 0
+        Me.tcStatistics.Size = New System.Drawing.Size(577, 323)
+        Me.tcStatistics.TabIndex = 0
         '
-        'rdbMaaned
+        'tpProsentfordeling
         '
-        Me.rdbMaaned.AutoCheck = False
-        Me.rdbMaaned.AutoSize = True
-        Me.rdbMaaned.Location = New System.Drawing.Point(402, 296)
-        Me.rdbMaaned.Name = "rdbMaaned"
-        Me.rdbMaaned.Size = New System.Drawing.Size(58, 17)
-        Me.rdbMaaned.TabIndex = 1
-        Me.rdbMaaned.TabStop = True
-        Me.rdbMaaned.Text = "Måned"
-        Me.rdbMaaned.UseVisualStyleBackColor = True
+        Me.tpProsentfordeling.Controls.Add(Me.dtpTil)
+        Me.tpProsentfordeling.Controls.Add(Me.lblTil)
+        Me.tpProsentfordeling.Controls.Add(Me.lblFra)
+        Me.tpProsentfordeling.Controls.Add(Me.dtpFra)
+        Me.tpProsentfordeling.Controls.Add(Me.chProsentfordeling)
+        Me.tpProsentfordeling.Controls.Add(Me.msMenu)
+        Me.tpProsentfordeling.Location = New System.Drawing.Point(4, 22)
+        Me.tpProsentfordeling.Name = "tpProsentfordeling"
+        Me.tpProsentfordeling.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpProsentfordeling.Size = New System.Drawing.Size(569, 297)
+        Me.tpProsentfordeling.TabIndex = 0
+        Me.tpProsentfordeling.Text = "Prosentfordeling av produkt"
+        Me.tpProsentfordeling.UseVisualStyleBackColor = True
         '
-        'rdbAar
+        'tpAvanse
         '
-        Me.rdbAar.AutoCheck = False
-        Me.rdbAar.AutoSize = True
-        Me.rdbAar.Location = New System.Drawing.Point(476, 296)
-        Me.rdbAar.Name = "rdbAar"
-        Me.rdbAar.Size = New System.Drawing.Size(35, 17)
-        Me.rdbAar.TabIndex = 2
-        Me.rdbAar.TabStop = True
-        Me.rdbAar.Text = "År"
-        Me.rdbAar.UseVisualStyleBackColor = True
+        Me.tpAvanse.Controls.Add(Me.chAvanse)
+        Me.tpAvanse.Location = New System.Drawing.Point(4, 22)
+        Me.tpAvanse.Name = "tpAvanse"
+        Me.tpAvanse.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpAvanse.Size = New System.Drawing.Size(569, 297)
+        Me.tpAvanse.TabIndex = 1
+        Me.tpAvanse.Text = "Selger avanse"
+        Me.tpAvanse.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'chProsentfordeling
         '
-        Me.GroupBox1.Controls.Add(Me.Chart1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(553, 272)
-        Me.GroupBox1.TabIndex = 4
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Statistikk"
-        '
-        'Chart1
-        '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Me.Chart1.Dock = System.Windows.Forms.DockStyle.Fill
+        ChartArea1.Area3DStyle.Enable3D = True
+        ChartArea1.Name = "ChartArea2"
+        Me.chProsentfordeling.ChartAreas.Add(ChartArea1)
+        Me.chProsentfordeling.Dock = System.Windows.Forms.DockStyle.Fill
         Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(3, 16)
-        Me.Chart1.Name = "Chart1"
-        Series1.ChartArea = "ChartArea1"
+        Me.chProsentfordeling.Legends.Add(Legend1)
+        Me.chProsentfordeling.Location = New System.Drawing.Point(3, 27)
+        Me.chProsentfordeling.Name = "chProsentfordeling"
+        Me.chProsentfordeling.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen
+        Series1.ChartArea = "ChartArea2"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series1.CustomProperties = "PieDrawingStyle=SoftEdge"
         Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(547, 253)
-        Me.Chart1.TabIndex = 0
-        Me.Chart1.Text = "Chart1"
+        Series1.Name = "BarChart"
+        Series1.Points.Add(DataPoint1)
+        Series1.Points.Add(DataPoint2)
+        Series1.Points.Add(DataPoint3)
+        Me.chProsentfordeling.Series.Add(Series1)
+        Me.chProsentfordeling.Size = New System.Drawing.Size(563, 267)
+        Me.chProsentfordeling.TabIndex = 0
+        Me.chProsentfordeling.Text = "Chart1"
         '
-        'cbValg
+        'msMenu
         '
-        Me.cbValg.FormattingEnabled = True
-        Me.cbValg.Items.AddRange(New Object() {"Utleie", "Avanse"})
-        Me.cbValg.Location = New System.Drawing.Point(128, 290)
-        Me.cbValg.Name = "cbValg"
-        Me.cbValg.Size = New System.Drawing.Size(121, 21)
-        Me.cbValg.TabIndex = 5
+        Me.msMenu.Location = New System.Drawing.Point(3, 3)
+        Me.msMenu.Name = "msMenu"
+        Me.msMenu.Size = New System.Drawing.Size(563, 24)
+        Me.msMenu.TabIndex = 1
+        Me.msMenu.Text = "MenuStrip1"
         '
-        'lblVelgStatisikk
+        'dtpFra
         '
-        Me.lblVelgStatisikk.AutoSize = True
-        Me.lblVelgStatisikk.Location = New System.Drawing.Point(50, 296)
-        Me.lblVelgStatisikk.Name = "lblVelgStatisikk"
-        Me.lblVelgStatisikk.Size = New System.Drawing.Size(72, 13)
-        Me.lblVelgStatisikk.TabIndex = 6
-        Me.lblVelgStatisikk.Text = "Velg statistikk"
+        Me.dtpFra.Location = New System.Drawing.Point(67, 3)
+        Me.dtpFra.Name = "dtpFra"
+        Me.dtpFra.Size = New System.Drawing.Size(135, 20)
+        Me.dtpFra.TabIndex = 2
+        '
+        'lblFra
+        '
+        Me.lblFra.AutoSize = True
+        Me.lblFra.Location = New System.Drawing.Point(3, 6)
+        Me.lblFra.Name = "lblFra"
+        Me.lblFra.Size = New System.Drawing.Size(58, 13)
+        Me.lblFra.TabIndex = 3
+        Me.lblFra.Text = "Periode fra"
+        '
+        'lblTil
+        '
+        Me.lblTil.AutoSize = True
+        Me.lblTil.Location = New System.Drawing.Point(222, 6)
+        Me.lblTil.Name = "lblTil"
+        Me.lblTil.Size = New System.Drawing.Size(18, 13)
+        Me.lblTil.TabIndex = 4
+        Me.lblTil.Text = "Til"
+        '
+        'dtpTil
+        '
+        Me.dtpTil.Location = New System.Drawing.Point(261, 3)
+        Me.dtpTil.Name = "dtpTil"
+        Me.dtpTil.Size = New System.Drawing.Size(137, 20)
+        Me.dtpTil.TabIndex = 5
+        '
+        'chAvanse
+        '
+        ChartArea2.Area3DStyle.Enable3D = True
+        ChartArea2.Area3DStyle.Inclination = 50
+        ChartArea2.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.None
+        ChartArea2.Area3DStyle.PointDepth = 50
+        ChartArea2.Area3DStyle.PointGapDepth = 200
+        ChartArea2.Area3DStyle.WallWidth = 0
+        ChartArea2.BackColor = System.Drawing.Color.White
+        ChartArea2.BorderColor = System.Drawing.Color.Empty
+        ChartArea2.Name = "ChartArea1"
+        Me.chAvanse.ChartAreas.Add(ChartArea2)
+        Me.chAvanse.Dock = System.Windows.Forms.DockStyle.Fill
+        Legend2.Name = "Legend1"
+        Me.chAvanse.Legends.Add(Legend2)
+        Me.chAvanse.Location = New System.Drawing.Point(3, 3)
+        Me.chAvanse.Name = "chAvanse"
+        Me.chAvanse.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen
+        Series2.ChartArea = "ChartArea1"
+        Series2.CustomProperties = "DrawingStyle=Cylinder"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Series2.YValuesPerPoint = 4
+        Me.chAvanse.Series.Add(Series2)
+        Me.chAvanse.Size = New System.Drawing.Size(563, 291)
+        Me.chAvanse.TabIndex = 0
+        Me.chAvanse.Text = "Chart1"
         '
         'frmStatistikk
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(577, 323)
-        Me.Controls.Add(Me.lblVelgStatisikk)
-        Me.Controls.Add(Me.cbValg)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.rdbAar)
-        Me.Controls.Add(Me.rdbMaaned)
-        Me.Controls.Add(Me.rdbUke)
+        Me.Controls.Add(Me.tcStatistics)
+        Me.MainMenuStrip = Me.msMenu
         Me.Name = "frmStatistikk"
         Me.Text = "Statistikk"
-        Me.GroupBox1.ResumeLayout(False)
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tcStatistics.ResumeLayout(False)
+        Me.tpProsentfordeling.ResumeLayout(False)
+        Me.tpProsentfordeling.PerformLayout()
+        Me.tpAvanse.ResumeLayout(False)
+        CType(Me.chProsentfordeling, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.chAvanse, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents rdbUke As System.Windows.Forms.RadioButton
-    Friend WithEvents rdbMaaned As System.Windows.Forms.RadioButton
-    Friend WithEvents rdbAar As System.Windows.Forms.RadioButton
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents cbValg As System.Windows.Forms.ComboBox
-    Friend WithEvents lblVelgStatisikk As System.Windows.Forms.Label
-    Friend WithEvents Chart1 As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents tcStatistics As System.Windows.Forms.TabControl
+    Friend WithEvents tpProsentfordeling As System.Windows.Forms.TabPage
+    Friend WithEvents tpAvanse As System.Windows.Forms.TabPage
+    Friend WithEvents chProsentfordeling As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents dtpFra As System.Windows.Forms.DateTimePicker
+    Friend WithEvents msMenu As System.Windows.Forms.MenuStrip
+    Friend WithEvents dtpTil As System.Windows.Forms.DateTimePicker
+    Friend WithEvents lblTil As System.Windows.Forms.Label
+    Friend WithEvents lblFra As System.Windows.Forms.Label
+    Friend WithEvents chAvanse As System.Windows.Forms.DataVisualization.Charting.Chart
 End Class

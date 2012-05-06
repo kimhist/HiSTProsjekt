@@ -34,6 +34,8 @@ Partial Class frmEndrePakke
         Me.lblNavnPakkeId = New System.Windows.Forms.Label()
         Me.cbNavnPakkeNavn = New System.Windows.Forms.ComboBox()
         Me.lblNavnPakkeNavn = New System.Windows.Forms.Label()
+        Me.btnNavnSlett = New System.Windows.Forms.Button()
+        Me.btnIdSlett = New System.Windows.Forms.Button()
         Me.gbSokId.SuspendLayout()
         Me.gbSokNavn.SuspendLayout()
         Me.SuspendLayout()
@@ -41,6 +43,7 @@ Partial Class frmEndrePakke
         'gbSokId
         '
         Me.gbSokId.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gbSokId.Controls.Add(Me.btnIdSlett)
         Me.gbSokId.Controls.Add(Me.btnIdEndre)
         Me.gbSokId.Controls.Add(Me.txtIdPakkeNavn)
         Me.gbSokId.Controls.Add(Me.lblIdPakkeNavn)
@@ -112,6 +115,7 @@ Partial Class frmEndrePakke
         'gbSokNavn
         '
         Me.gbSokNavn.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gbSokNavn.Controls.Add(Me.btnNavnSlett)
         Me.gbSokNavn.Controls.Add(Me.btnNavnEndre)
         Me.gbSokNavn.Controls.Add(Me.txtNavnPakkeId)
         Me.gbSokNavn.Controls.Add(Me.lblNavnPakkeId)
@@ -180,6 +184,26 @@ Partial Class frmEndrePakke
         Me.lblNavnPakkeNavn.TabIndex = 1
         Me.lblNavnPakkeNavn.Text = "&Navn"
         '
+        'btnNavnSlett
+        '
+        Me.btnNavnSlett.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnNavnSlett.Location = New System.Drawing.Point(98, 73)
+        Me.btnNavnSlett.Name = "btnNavnSlett"
+        Me.btnNavnSlett.Size = New System.Drawing.Size(75, 23)
+        Me.btnNavnSlett.TabIndex = 9
+        Me.btnNavnSlett.Text = "&Slett"
+        Me.btnNavnSlett.UseVisualStyleBackColor = True
+        '
+        'btnIdSlett
+        '
+        Me.btnIdSlett.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnIdSlett.Location = New System.Drawing.Point(98, 73)
+        Me.btnIdSlett.Name = "btnIdSlett"
+        Me.btnIdSlett.Size = New System.Drawing.Size(75, 23)
+        Me.btnIdSlett.TabIndex = 10
+        Me.btnIdSlett.Text = "S&lett"
+        Me.btnIdSlett.UseVisualStyleBackColor = True
+        '
         'frmEndrePakke
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -210,4 +234,6 @@ Partial Class frmEndrePakke
     Friend WithEvents lblNavnPakkeId As System.Windows.Forms.Label
     Friend WithEvents cbNavnPakkeNavn As System.Windows.Forms.ComboBox
     Friend WithEvents lblNavnPakkeNavn As System.Windows.Forms.Label
+    Friend WithEvents btnIdSlett As System.Windows.Forms.Button
+    Friend WithEvents btnNavnSlett As System.Windows.Forms.Button
 End Class
