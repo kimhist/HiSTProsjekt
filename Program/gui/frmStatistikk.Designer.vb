@@ -25,26 +25,22 @@ Partial Class frmStatistikk
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataPoint1 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0.0R, 10.0R)
-        Dim DataPoint2 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0.0R, 20.0R)
-        Dim DataPoint3 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0.0R, 30.0R)
         Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.tcStatistics = New System.Windows.Forms.TabControl()
         Me.tpProsentfordeling = New System.Windows.Forms.TabPage()
-        Me.tpAvanse = New System.Windows.Forms.TabPage()
+        Me.dtpTil = New System.Windows.Forms.DateTimePicker()
+        Me.lblTil = New System.Windows.Forms.Label()
+        Me.lblFra = New System.Windows.Forms.Label()
+        Me.dtpFra = New System.Windows.Forms.DateTimePicker()
         Me.chProsentfordeling = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.msMenu = New System.Windows.Forms.MenuStrip()
-        Me.dtpFra = New System.Windows.Forms.DateTimePicker()
-        Me.lblFra = New System.Windows.Forms.Label()
-        Me.lblTil = New System.Windows.Forms.Label()
-        Me.dtpTil = New System.Windows.Forms.DateTimePicker()
+        Me.tpAvanse = New System.Windows.Forms.TabPage()
         Me.chAvanse = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.tcStatistics.SuspendLayout()
         Me.tpProsentfordeling.SuspendLayout()
-        Me.tpAvanse.SuspendLayout()
         CType(Me.chProsentfordeling, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tpAvanse.SuspendLayout()
         CType(Me.chAvanse, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -75,16 +71,41 @@ Partial Class frmStatistikk
         Me.tpProsentfordeling.Text = "Prosentfordeling av produkt"
         Me.tpProsentfordeling.UseVisualStyleBackColor = True
         '
-        'tpAvanse
+        'dtpTil
         '
-        Me.tpAvanse.Controls.Add(Me.chAvanse)
-        Me.tpAvanse.Location = New System.Drawing.Point(4, 22)
-        Me.tpAvanse.Name = "tpAvanse"
-        Me.tpAvanse.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpAvanse.Size = New System.Drawing.Size(569, 297)
-        Me.tpAvanse.TabIndex = 1
-        Me.tpAvanse.Text = "Selger avanse"
-        Me.tpAvanse.UseVisualStyleBackColor = True
+        Me.dtpTil.CustomFormat = "yyyy-MM-dd"
+        Me.dtpTil.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpTil.Location = New System.Drawing.Point(261, 3)
+        Me.dtpTil.Name = "dtpTil"
+        Me.dtpTil.Size = New System.Drawing.Size(137, 20)
+        Me.dtpTil.TabIndex = 5
+        '
+        'lblTil
+        '
+        Me.lblTil.AutoSize = True
+        Me.lblTil.Location = New System.Drawing.Point(222, 6)
+        Me.lblTil.Name = "lblTil"
+        Me.lblTil.Size = New System.Drawing.Size(18, 13)
+        Me.lblTil.TabIndex = 4
+        Me.lblTil.Text = "Til"
+        '
+        'lblFra
+        '
+        Me.lblFra.AutoSize = True
+        Me.lblFra.Location = New System.Drawing.Point(3, 6)
+        Me.lblFra.Name = "lblFra"
+        Me.lblFra.Size = New System.Drawing.Size(58, 13)
+        Me.lblFra.TabIndex = 3
+        Me.lblFra.Text = "Periode fra"
+        '
+        'dtpFra
+        '
+        Me.dtpFra.CustomFormat = "yyyy-MM-dd"
+        Me.dtpFra.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpFra.Location = New System.Drawing.Point(67, 3)
+        Me.dtpFra.Name = "dtpFra"
+        Me.dtpFra.Size = New System.Drawing.Size(135, 20)
+        Me.dtpFra.TabIndex = 2
         '
         'chProsentfordeling
         '
@@ -102,9 +123,6 @@ Partial Class frmStatistikk
         Series1.CustomProperties = "PieDrawingStyle=SoftEdge"
         Series1.Legend = "Legend1"
         Series1.Name = "BarChart"
-        Series1.Points.Add(DataPoint1)
-        Series1.Points.Add(DataPoint2)
-        Series1.Points.Add(DataPoint3)
         Me.chProsentfordeling.Series.Add(Series1)
         Me.chProsentfordeling.Size = New System.Drawing.Size(563, 267)
         Me.chProsentfordeling.TabIndex = 0
@@ -118,61 +136,30 @@ Partial Class frmStatistikk
         Me.msMenu.TabIndex = 1
         Me.msMenu.Text = "MenuStrip1"
         '
-        'dtpFra
+        'tpAvanse
         '
-        Me.dtpFra.Location = New System.Drawing.Point(67, 3)
-        Me.dtpFra.Name = "dtpFra"
-        Me.dtpFra.Size = New System.Drawing.Size(135, 20)
-        Me.dtpFra.TabIndex = 2
-        '
-        'lblFra
-        '
-        Me.lblFra.AutoSize = True
-        Me.lblFra.Location = New System.Drawing.Point(3, 6)
-        Me.lblFra.Name = "lblFra"
-        Me.lblFra.Size = New System.Drawing.Size(58, 13)
-        Me.lblFra.TabIndex = 3
-        Me.lblFra.Text = "Periode fra"
-        '
-        'lblTil
-        '
-        Me.lblTil.AutoSize = True
-        Me.lblTil.Location = New System.Drawing.Point(222, 6)
-        Me.lblTil.Name = "lblTil"
-        Me.lblTil.Size = New System.Drawing.Size(18, 13)
-        Me.lblTil.TabIndex = 4
-        Me.lblTil.Text = "Til"
-        '
-        'dtpTil
-        '
-        Me.dtpTil.Location = New System.Drawing.Point(261, 3)
-        Me.dtpTil.Name = "dtpTil"
-        Me.dtpTil.Size = New System.Drawing.Size(137, 20)
-        Me.dtpTil.TabIndex = 5
+        Me.tpAvanse.Controls.Add(Me.chAvanse)
+        Me.tpAvanse.Location = New System.Drawing.Point(4, 22)
+        Me.tpAvanse.Name = "tpAvanse"
+        Me.tpAvanse.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpAvanse.Size = New System.Drawing.Size(569, 297)
+        Me.tpAvanse.TabIndex = 1
+        Me.tpAvanse.Text = "Selger avanse"
+        Me.tpAvanse.UseVisualStyleBackColor = True
         '
         'chAvanse
         '
-        ChartArea2.Area3DStyle.Enable3D = True
-        ChartArea2.Area3DStyle.Inclination = 50
-        ChartArea2.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.None
-        ChartArea2.Area3DStyle.PointDepth = 50
-        ChartArea2.Area3DStyle.PointGapDepth = 200
-        ChartArea2.Area3DStyle.WallWidth = 0
-        ChartArea2.BackColor = System.Drawing.Color.White
-        ChartArea2.BorderColor = System.Drawing.Color.Empty
+        ChartArea2.AxisX.MajorGrid.Enabled = False
         ChartArea2.Name = "ChartArea1"
         Me.chAvanse.ChartAreas.Add(ChartArea2)
         Me.chAvanse.Dock = System.Windows.Forms.DockStyle.Fill
-        Legend2.Name = "Legend1"
-        Me.chAvanse.Legends.Add(Legend2)
         Me.chAvanse.Location = New System.Drawing.Point(3, 3)
         Me.chAvanse.Name = "chAvanse"
         Me.chAvanse.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen
         Series2.ChartArea = "ChartArea1"
-        Series2.CustomProperties = "DrawingStyle=Cylinder"
-        Series2.Legend = "Legend1"
+        Series2.CustomProperties = "DrawingStyle=LightToDark"
         Series2.Name = "Series1"
-        Series2.YValuesPerPoint = 4
+        Series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.[String]
         Me.chAvanse.Series.Add(Series2)
         Me.chAvanse.Size = New System.Drawing.Size(563, 291)
         Me.chAvanse.TabIndex = 0
@@ -190,8 +177,8 @@ Partial Class frmStatistikk
         Me.tcStatistics.ResumeLayout(False)
         Me.tpProsentfordeling.ResumeLayout(False)
         Me.tpProsentfordeling.PerformLayout()
-        Me.tpAvanse.ResumeLayout(False)
         CType(Me.chProsentfordeling, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tpAvanse.ResumeLayout(False)
         CType(Me.chAvanse, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
