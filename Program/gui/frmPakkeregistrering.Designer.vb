@@ -22,6 +22,7 @@ Partial Class frmPakkeregistrering
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPakkeregistrering))
         Me.btnAvbryt = New System.Windows.Forms.Button()
         Me.btnLagre = New System.Windows.Forms.Button()
         Me.gbProdukt = New System.Windows.Forms.GroupBox()
@@ -211,6 +212,7 @@ Partial Class frmPakkeregistrering
         Me.Controls.Add(Me.lblBeskrivelse)
         Me.Controls.Add(Me.lblRabatt)
         Me.Controls.Add(Me.lblNavn)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmPakkeregistrering"
         Me.Text = "Pakkeregistrering"
         Me.gbProdukt.ResumeLayout(False)

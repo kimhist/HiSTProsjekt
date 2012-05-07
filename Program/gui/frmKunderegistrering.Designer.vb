@@ -22,6 +22,7 @@ Partial Class frmKunderegistrering
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmKunderegistrering))
         Me.btnAvbryt = New System.Windows.Forms.Button()
         Me.btnLagre = New System.Windows.Forms.Button()
         Me.txtSkonummer = New System.Windows.Forms.TextBox()
@@ -289,6 +290,7 @@ Partial Class frmKunderegistrering
         Me.Controls.Add(Me.lblAdresse)
         Me.Controls.Add(Me.lblEtternavn)
         Me.Controls.Add(Me.lblFornavn)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmKunderegistrering"
         Me.Text = "Kunderegistrering"
         Me.ResumeLayout(False)

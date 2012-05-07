@@ -22,6 +22,7 @@ Partial Class frmEndreBruker
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEndreBruker))
         Me.btnEndre = New System.Windows.Forms.Button()
         Me.lblNavn = New System.Windows.Forms.Label()
         Me.cbNavn = New System.Windows.Forms.ComboBox()
@@ -98,6 +99,7 @@ Partial Class frmEndreBruker
         Me.Controls.Add(Me.lblNavn)
         Me.Controls.Add(Me.btnEndre)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frmEndreBruker"
         Me.Text = "Endre bruker"

@@ -27,6 +27,7 @@ Partial Class frmStatistikk
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmStatistikk))
         Me.tcStatistics = New System.Windows.Forms.TabControl()
         Me.tpProsentfordeling = New System.Windows.Forms.TabPage()
         Me.dtpTil = New System.Windows.Forms.DateTimePicker()
@@ -171,6 +172,7 @@ Partial Class frmStatistikk
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(577, 323)
         Me.Controls.Add(Me.tcStatistics)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.msMenu
         Me.Name = "frmStatistikk"
         Me.Text = "Statistikk"

@@ -22,6 +22,7 @@ Partial Class frmEndreProdukt
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEndreProdukt))
         Me.gbSokNavn = New System.Windows.Forms.GroupBox()
         Me.btnNavnSlett = New System.Windows.Forms.Button()
         Me.btnNavnEndre = New System.Windows.Forms.Button()
@@ -216,6 +217,7 @@ Partial Class frmEndreProdukt
         Me.Controls.Add(Me.gbSokId)
         Me.Controls.Add(Me.gbSokNavn)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frmEndreProdukt"
         Me.Text = "Endre produkt"

@@ -22,6 +22,7 @@ Partial Class frmProduktRegistrering
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProduktRegistrering))
         Me.lblNavn = New System.Windows.Forms.Label()
         Me.lblBeskrivelse = New System.Windows.Forms.Label()
         Me.lblGruppe = New System.Windows.Forms.Label()
@@ -228,6 +229,7 @@ Partial Class frmProduktRegistrering
         Me.Controls.Add(Me.lblGruppe)
         Me.Controls.Add(Me.lblBeskrivelse)
         Me.Controls.Add(Me.lblNavn)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmProduktRegistrering"
         Me.Text = "Produktregistrering"
         Me.gbPriser.ResumeLayout(False)

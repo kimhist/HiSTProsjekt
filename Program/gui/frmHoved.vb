@@ -57,19 +57,41 @@ Public Class frmHoved
     End Sub
 
     Private Function openForm(ByVal form As String) As Boolean
-        Dim f As Form = GetFormByName(form)
-        f.ShowDialog()
-        Return True
-    End Function
+        Dim f As Form
 
-    Private Function GetFormByName(ByVal formName As String) As Object
-        Dim myasm As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly()
+        Select Case form
+            Case "frmBrukerbehandling"
+                f = New frmBrukerbehandling
+            Case "frmEndreBruker"
+                f = New frmEndreBruker
+            Case "frmKunderegistrering"
+                f = New frmKunderegistrering
+            Case "frmEndreKunde"
+                f = New frmEndreKunde
+            Case "frmProduktRegistrering"
+                f = New frmProduktRegistrering
+            Case "frmEndreProdukt"
+                f = New frmEndreProdukt
+            Case "frmUtleieregistrering"
+                f = New frmUtleieregistrering
+            Case "frmEndreUtleie"
+                f = New frmEndreUtleie
+            Case "frmPakkeregistrering"
+                f = New frmPakkeregistrering
+            Case "frmEndrePakke"
+                f = New frmEndrePakke
+            Case "frmStatistikk"
+                f = New frmStatistikk
+            Case Else
+                f = Nothing
+        End Select
 
         Try
-            Return myasm.CreateInstance(myasm.GetName.Name.Replace(" ", "_") & "." & formName)
+            f.ShowDialog()
         Catch ex As Exception
-            Return Nothing
         End Try
+
+        Return True
     End Function
 
     Private Sub addBrukerbehandling()

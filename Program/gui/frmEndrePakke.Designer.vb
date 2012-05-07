@@ -22,20 +22,21 @@ Partial Class frmEndrePakke
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEndrePakke))
         Me.gbSokId = New System.Windows.Forms.GroupBox()
+        Me.btnIdSlett = New System.Windows.Forms.Button()
         Me.btnIdEndre = New System.Windows.Forms.Button()
         Me.txtIdPakkeNavn = New System.Windows.Forms.TextBox()
         Me.lblIdPakkeNavn = New System.Windows.Forms.Label()
         Me.cbIdPakkeId = New System.Windows.Forms.ComboBox()
         Me.lblIdPakkeid = New System.Windows.Forms.Label()
         Me.gbSokNavn = New System.Windows.Forms.GroupBox()
+        Me.btnNavnSlett = New System.Windows.Forms.Button()
         Me.btnNavnEndre = New System.Windows.Forms.Button()
         Me.txtNavnPakkeId = New System.Windows.Forms.TextBox()
         Me.lblNavnPakkeId = New System.Windows.Forms.Label()
         Me.cbNavnPakkeNavn = New System.Windows.Forms.ComboBox()
         Me.lblNavnPakkeNavn = New System.Windows.Forms.Label()
-        Me.btnNavnSlett = New System.Windows.Forms.Button()
-        Me.btnIdSlett = New System.Windows.Forms.Button()
         Me.gbSokId.SuspendLayout()
         Me.gbSokNavn.SuspendLayout()
         Me.SuspendLayout()
@@ -55,6 +56,16 @@ Partial Class frmEndrePakke
         Me.gbSokId.TabIndex = 8
         Me.gbSokId.TabStop = False
         Me.gbSokId.Text = "Pakkesøk på id"
+        '
+        'btnIdSlett
+        '
+        Me.btnIdSlett.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnIdSlett.Location = New System.Drawing.Point(98, 73)
+        Me.btnIdSlett.Name = "btnIdSlett"
+        Me.btnIdSlett.Size = New System.Drawing.Size(75, 23)
+        Me.btnIdSlett.TabIndex = 10
+        Me.btnIdSlett.Text = "S&lett"
+        Me.btnIdSlett.UseVisualStyleBackColor = True
         '
         'btnIdEndre
         '
@@ -128,6 +139,16 @@ Partial Class frmEndrePakke
         Me.gbSokNavn.TabStop = False
         Me.gbSokNavn.Text = "Pakkesøk på navn"
         '
+        'btnNavnSlett
+        '
+        Me.btnNavnSlett.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnNavnSlett.Location = New System.Drawing.Point(98, 73)
+        Me.btnNavnSlett.Name = "btnNavnSlett"
+        Me.btnNavnSlett.Size = New System.Drawing.Size(75, 23)
+        Me.btnNavnSlett.TabIndex = 9
+        Me.btnNavnSlett.Text = "&Slett"
+        Me.btnNavnSlett.UseVisualStyleBackColor = True
+        '
         'btnNavnEndre
         '
         Me.btnNavnEndre.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -184,26 +205,6 @@ Partial Class frmEndrePakke
         Me.lblNavnPakkeNavn.TabIndex = 1
         Me.lblNavnPakkeNavn.Text = "&Navn"
         '
-        'btnNavnSlett
-        '
-        Me.btnNavnSlett.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnNavnSlett.Location = New System.Drawing.Point(98, 73)
-        Me.btnNavnSlett.Name = "btnNavnSlett"
-        Me.btnNavnSlett.Size = New System.Drawing.Size(75, 23)
-        Me.btnNavnSlett.TabIndex = 9
-        Me.btnNavnSlett.Text = "&Slett"
-        Me.btnNavnSlett.UseVisualStyleBackColor = True
-        '
-        'btnIdSlett
-        '
-        Me.btnIdSlett.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnIdSlett.Location = New System.Drawing.Point(98, 73)
-        Me.btnIdSlett.Name = "btnIdSlett"
-        Me.btnIdSlett.Size = New System.Drawing.Size(75, 23)
-        Me.btnIdSlett.TabIndex = 10
-        Me.btnIdSlett.Text = "S&lett"
-        Me.btnIdSlett.UseVisualStyleBackColor = True
-        '
         'frmEndrePakke
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -212,6 +213,7 @@ Partial Class frmEndrePakke
         Me.Controls.Add(Me.gbSokId)
         Me.Controls.Add(Me.gbSokNavn)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frmEndrePakke"
         Me.Text = "Endre pakke"

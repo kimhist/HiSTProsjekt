@@ -22,6 +22,7 @@ Partial Class frmBrukerbehandling
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBrukerbehandling))
         Me.lblFornavn = New System.Windows.Forms.Label()
         Me.lblEtternavn = New System.Windows.Forms.Label()
         Me.lblAdresse = New System.Windows.Forms.Label()
@@ -294,6 +295,7 @@ Partial Class frmBrukerbehandling
         Me.Controls.Add(Me.lblAdresse)
         Me.Controls.Add(Me.lblEtternavn)
         Me.Controls.Add(Me.lblFornavn)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBrukerbehandling"
         Me.Text = "Brukerbehandling"
         Me.ResumeLayout(False)

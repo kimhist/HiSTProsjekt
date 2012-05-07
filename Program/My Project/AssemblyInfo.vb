@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Program")> 
+<Assembly: AssemblyTitle("Utleieregister")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("Program")> 
+<Assembly: AssemblyCompany("AS SportUtleie")> 
+<Assembly: AssemblyProduct("Utleieregister")> 
 <Assembly: AssemblyCopyright("Copyright ©  2012")> 
 <Assembly: AssemblyTrademark("")> 
 

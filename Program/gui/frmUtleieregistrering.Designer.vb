@@ -22,6 +22,7 @@ Partial Class frmUtleieregistrering
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUtleieregistrering))
         Me.scMain = New System.Windows.Forms.SplitContainer()
         Me.dtpTil = New System.Windows.Forms.DateTimePicker()
         Me.lblTil = New System.Windows.Forms.Label()
@@ -421,6 +422,7 @@ Partial Class frmUtleieregistrering
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(660, 386)
         Me.Controls.Add(Me.scMain)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmUtleieregistrering"
         Me.Text = "Utleieregistrering"
         Me.scMain.Panel1.ResumeLayout(False)

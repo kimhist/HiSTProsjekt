@@ -22,10 +22,11 @@ Partial Class frmHoved
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmHoved))
         Me.msMenu = New System.Windows.Forms.MenuStrip()
-        Me.pnHoved = New System.Windows.Forms.Panel()
         Me.tsmiLogout = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiBrukermanual = New System.Windows.Forms.ToolStripMenuItem()
+        Me.pnHoved = New System.Windows.Forms.Panel()
         Me.msMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -37,15 +38,6 @@ Partial Class frmHoved
         Me.msMenu.Size = New System.Drawing.Size(270, 24)
         Me.msMenu.TabIndex = 0
         Me.msMenu.Text = "Menu"
-        '
-        'pnHoved
-        '
-        Me.pnHoved.AutoSize = True
-        Me.pnHoved.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnHoved.Location = New System.Drawing.Point(0, 24)
-        Me.pnHoved.Name = "pnHoved"
-        Me.pnHoved.Size = New System.Drawing.Size(270, 119)
-        Me.pnHoved.TabIndex = 1
         '
         'tsmiLogout
         '
@@ -61,6 +53,15 @@ Partial Class frmHoved
         Me.tsmiBrukermanual.Size = New System.Drawing.Size(109, 20)
         Me.tsmiBrukermanual.Text = "&Brukermanual"
         '
+        'pnHoved
+        '
+        Me.pnHoved.AutoSize = True
+        Me.pnHoved.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnHoved.Location = New System.Drawing.Point(0, 24)
+        Me.pnHoved.Name = "pnHoved"
+        Me.pnHoved.Size = New System.Drawing.Size(270, 119)
+        Me.pnHoved.TabIndex = 1
+        '
         'frmHoved
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -69,6 +70,7 @@ Partial Class frmHoved
         Me.ClientSize = New System.Drawing.Size(270, 143)
         Me.Controls.Add(Me.pnHoved)
         Me.Controls.Add(Me.msMenu)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.msMenu
         Me.Name = "frmHoved"
         Me.Text = "AS SportUtleie"
